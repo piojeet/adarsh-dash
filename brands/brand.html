@@ -1,12 +1,31 @@
-<!-- brand.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Brand Details</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    .brand-card { background: #f3f3f3; padding: 20px; border-radius: 10px; max-width: 600px; }
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .brand-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -14,7 +33,12 @@
   <div id="brand-container" class="brand-card">Loading...</div>
 
   <script>
-    // 1. Dummy data simulate kar rahe hain (aap chahe to API se bhi fetch kar sakte ho)
+    // ✅ Get platform and brand from query string: ?platform=youtube&brand=On
+    const urlParams = new URLSearchParams(window.location.search);
+    const platformSlug = urlParams.get("platform");
+    const brandSlug = urlParams.get("brand");
+
+    // ✅ Example brand data
     const brandData = {
       "On": {
         name: "On",
@@ -39,25 +63,22 @@
       }
     };
 
-    // 2. Get brand slug from URL query
-    const urlParams = new URLSearchParams(window.location.search);
-    const brandSlug = urlParams.get("brand");
-
     const container = document.getElementById("brand-container");
 
-    // 3. Show dynamic data based on brand
+    // ✅ Show dynamic content if found
     if (brandSlug && brandData[brandSlug]) {
       const data = brandData[brandSlug];
       container.innerHTML = `
         <h2>${data.name}</h2>
+        <p><strong>Platform:</strong> ${platformSlug}</p>
         <p><strong>Category:</strong> ${data.category}</p>
         <p><strong>Influencers:</strong> ${data.influencers}</p>
         <p><strong>Budget:</strong> ${data.budget}</p>
         <p><strong>Description:</strong> ${data.description}</p>
-        <a href="index.html">← Back to List</a>
+        <a href="/brands/brands.html">← Back to List</a>
       `;
     } else {
-      container.innerHTML = `<p>No data found for brand: ${brandSlug}</p><a href="index.html">← Back</a>`;
+      container.innerHTML = `<p>No data found for brand: ${brandSlug || "N/A"}</p><a href="/brands/brands.html">← Back</a>`;
     }
   </script>
 </body>
