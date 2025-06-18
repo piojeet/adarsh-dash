@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="Sidebar">
+                <div class="left-side-logo">
+                    <a href="#"><img src="" alt="Logo"></a>
+                </div>
+                <ul class="side-bar-menu">
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                            Dashboard
+                        </a></li>
+                    <li><a href="#" class="active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                            Search (8/50)
+                        </a></li>
+                    <li><a href="../list/list.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 6l11 0" />
+                                <path d="M9 12l11 0" />
+                                <path d="M9 18l11 0" />
+                                <path d="M5 6l0 .01" />
+                                <path d="M5 12l0 .01" />
+                                <path d="M5 18l0 .01" />
+                            </svg>
+                            Lists
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-file-analytics">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-3 10a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m3 4a1 1 0 0 0 -1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0 -1 -1m3 -2a1 1 0 0 0 -1 1v3a1 1 0 0 0 2 0v-3a1 1 0 0 0 -1 -1" />
+                                <path d="M19 7h-4l-.001 -4.001z" />
+                            </svg>
+                            Resort
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-speakerphone">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M18 8a3 3 0 0 1 0 6" />
+                                <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+                                <path
+                                    d="M12 8h0l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+                            </svg>
+                            Campaigns
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Analysis (50/50)
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Sentiment
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Compare Bbrand
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Competitor Research
+                        </a></li>
+                    <li><a href="#">Youtube Report: 14/50</a></li>
+                    <li><a href="#">Instagram Report: 1/50</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <div class="right-main">
+            <header class="site-header">
+                <div class="header-container">
+                    <div class="logo-wrapper">
+                        <img src="https://www.transparentpng.com/thumb/man/vkarWM-download-man-png-image-png-image-freepngimg.png"
+                            alt="Logo" class="site-logo" />
+                    </div>
+
+                    <div class="user-info">
+                        <div class="user-name">Pawan</div>
+                        <div class="user-role">Brand Account</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="search-cont-top">
+                <div class="form-inner-heading">Search</div>
+
+                <div class="top-head-right"><span>Dashboard</span> <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-right-icon lucide-chevrons-right"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg></span> <span>Search</span></div>
+            </div>
+
+            <div class="form-wrapper">
+
+
+
+                <div class="form-inner">
+
+                    <form action="" class="influencer-form">
+                        <div class="form-group">
+                            <div class="form-label">INFLUENCER LOCATION</div>
+                            <input type="text" placeholder="Select country" class="form-input">
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">SUBSCRIBERS</div>
+                            <div class="range-group">
+                                <div class="range-input">
+                                    <label for="subfrom">From</label>
+                                    <input type="text" placeholder="From" class="form-input">
+                                </div>
+                                <div class="range-input">
+                                    <label for="subto">To</label>
+                                    <input type="text" placeholder="To" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">AVERAGE VIEWS</div>
+                            <div class="range-group">
+                                <div class="range-input">
+                                    <label for="avfrom">From</label>
+                                    <input type="text" placeholder="From" class="form-input">
+                                </div>
+                                <div class="range-input">
+                                    <label for="avto">To</label>
+                                    <input type="text" placeholder="To" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">AVERAGE SHORTS VIEWS</div>
+                            <div class="range-group">
+                                <div class="range-input">
+                                    <label for="asvfrom">From</label>
+                                    <input type="text" placeholder="From" class="form-input">
+                                </div>
+                                <div class="range-input">
+                                    <label for="asvto">To</label>
+                                    <input type="text" placeholder="To" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">LANGUAGE</div>
+                            <input type="text" placeholder="Select language" class="form-input">
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">CATEGORY</div>
+                            <input type="text" placeholder="Select category" class="form-input">
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">ENGAGEMENT RATE</div>
+                            <div class="range-group">
+                                <div class="range-input">
+                                    <label for="enrfrom">From</label>
+                                    <input type="text" placeholder="From" class="form-input">
+                                </div>
+                                <div class="range-input">
+                                    <label for="enrto">To</label>
+                                    <input type="text" placeholder="To" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">LAST VIDEO</div>
+                            <select name="lastvideo" class="form-select">
+                                <option value="Anytime" selected>Anytime</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">VERIFIED</div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" name="verified" id="verified">
+                                <label for="verified">Yes</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">PAID PARTNERSHIP</div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" name="pertnership" id="pertnership">
+                                <label for="pertnership">Yes</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">CHANNEL LOOKALIKES</div>
+                            <input type="text" placeholder="mrbeast" class="form-input">
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">Age</div>
+                            <div class="range-group">
+                                <div class="range-input">
+                                    <label for="agefrom">From</label>
+                                    <input type="text" placeholder="From" class="form-input">
+                                </div>
+                                <div class="range-input">
+                                    <label for="ageto">To</label>
+                                    <input type="text" placeholder="To" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">GENDER</div>
+                            <select name="gender" id="gender" class="form-select">
+                                <option value="Any" selected>Any</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-heading">ADVANCED SEARCH</div>
+
+                        <hr>
+
+                        <div class="form-group form-group-s">
+                            <div class="form-label">AUDIENCE CATEGORY</div>
+                            <select name="adcselecta" id="adcselecta" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                            <select name="adcselectb" id="adcselectb" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group form-group-s">
+                            <div class="form-label">AUDIENCE LANGUAGE</div>
+                            <select name="aulselecta" id="aulselecta" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                            <select name="aulselectb" id="aulselectb" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group form-group-s">
+                            <div class="form-label">AUDIENCE COUNTRY</div>
+                            <select name="aucselecta" id="aucselecta" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                            <select name="aucselectb" id="aucselectb" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group form-group-s">
+                            <div class="form-label">AUDIENCE CITY</div>
+                            <select name="auctselecta" id="auctselecta" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                            <select name="auctselectb" id="auctselectb" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group form-group-s">
+                            <div class="form-label">AUDIENCE GENDER</div>
+                            <select name="augselecta" id="augselecta" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                            <select name="augselectb" id="augselectb" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">CONTACT INFORMATION</div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" name="coninfo" id="coninfo">
+                                <label for="coninfo">Yes</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <div class="form-label">SUBSCRIBERS GROWTH</div>
+                            <select name="subgrow" id="subgrow" class="form-select">
+                                <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-sidebar">
+                    <div class="form-sidebar__search">
+                        <form action="" class="form-sidebar__form">
+                            <div class="form-group-select">
+                                <select name="" id="" class="form-select">
+                                    <option value="Youtube">Youtube</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Tiktok">Tiktok</option>
+                                    <option value="Twitch">Twitch</option>
+                                </select>
+
+                                <div class="form-group-select-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group--search">
+                                <input type="text" placeholder="Search here.." class="form-input">
+                                <button class="form-button">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="form-sidebar__results-count">
+                        Showing 1 to 30 of 13.77M results
+                    </div>
+
+                    <div class="form-sidebar__result-list">
+
+                        <div class="result-card">
+                            <div class="result-card__top">
+                                <div class="result-card__info">
+                                    <div class="result-card__img">
+                                        <img src="https://yt3.ggpht.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s800-c-k-c0x00ffffff-no-rj"
+                                            alt="img">
+                                    </div>
+                                    <div class="result-card__details">
+                                        <h3 class="result-card__name">MrBeast</h3>
+                                        <div class="result-card__location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2">
+                                                </path>
+                                                <path
+                                                    d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6">
+                                                </path>
+                                            </svg>
+                                            United States
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-card__action">
+                                    <button class="result-card__menu-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-heart-icon lucide-heart">
+                                            <path
+                                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="result-card__stats">
+                                <div class="result-card__stat">
+                                    <div class="result-card__label">SUBSCRIBERS</div>
+                                    <div class="result-card__value">394M</div>
+                                </div>
+                                <div class="result-card__stat">
+                                    <div class="result-card__label">ENGAGEMENT</div>
+                                    <div class="result-card__value">2.93%</div>
+                                </div>
+                            </div>
+
+                            <div class="result-card__tags">
+                                <button class="result-card__tag result-card__tag-eg">English</button>
+                                <button class="result-card__tag result-card__et">Entertainment</button>
+                            </div>
+
+                            <div class="result-card__footer">
+                                <button class="result-card__view-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-chart-column-big-icon lucide-chart-column-big">
+                                        <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                                        <rect x="15" y="5" width="4" height="12" rx="1" />
+                                        <rect x="7" y="8" width="4" height="9" rx="1" />
+                                    </svg>
+                                    View Report</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-card__top">
+                                <div class="result-card__info">
+                                    <div class="result-card__img">
+                                        <img src="https://yt3.ggpht.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s800-c-k-c0x00ffffff-no-rj"
+                                            alt="img">
+                                    </div>
+                                    <div class="result-card__details">
+                                        <h3 class="result-card__name">MrBeast</h3>
+                                        <div class="result-card__location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2">
+                                                </path>
+                                                <path
+                                                    d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6">
+                                                </path>
+                                            </svg>
+                                            United States
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-card__action">
+                                    <button class="result-card__menu-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-heart-icon lucide-heart">
+                                            <path
+                                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="result-card__stats">
+                                <div class="result-card__stat">
+                                    <div class="result-card__label">SUBSCRIBERS</div>
+                                    <div class="result-card__value">394M</div>
+                                </div>
+                                <div class="result-card__stat">
+                                    <div class="result-card__label">ENGAGEMENT</div>
+                                    <div class="result-card__value">2.93%</div>
+                                </div>
+                            </div>
+
+                            <div class="result-card__tags">
+                                <button class="result-card__tag">English</button>
+                                <button class="result-card__tag">Entertainment</button>
+                            </div>
+
+                            <div class="result-card__footer">
+                                <button class="result-card__view-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-chart-column-big-icon lucide-chart-column-big">
+                                        <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                                        <rect x="15" y="5" width="4" height="12" rx="1" />
+                                        <rect x="7" y="8" width="4" height="9" rx="1" />
+                                    </svg>
+                                    View Report</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="search-pagination">
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="footer">
+                <p>Copyright © <a href="#">Dreabee</a>. Designed with by <a href="#">Dreabee</a> All rights reserved</p>
+            </div>
+        </div>
+    </main>
+
+
+
+
+</body>
+
+</html>

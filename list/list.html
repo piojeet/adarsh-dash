@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="Sidebar">
+                <div class="left-side-logo">
+                    <a href="#"><img src="" alt="Logo"></a>
+                </div>
+                <ul class="side-bar-menu">
+                    <li><a href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                            Dashboard
+                        </a></li>
+                    <li><a href="../search/search.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                            Search (8/50)
+                        </a></li>
+                    <li><a href="list.html" class="active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 6l11 0" />
+                                <path d="M9 12l11 0" />
+                                <path d="M9 18l11 0" />
+                                <path d="M5 6l0 .01" />
+                                <path d="M5 12l0 .01" />
+                                <path d="M5 18l0 .01" />
+                            </svg>
+                            Lists
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-file-analytics">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-3 10a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m3 4a1 1 0 0 0 -1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0 -1 -1m3 -2a1 1 0 0 0 -1 1v3a1 1 0 0 0 2 0v-3a1 1 0 0 0 -1 -1" />
+                                <path d="M19 7h-4l-.001 -4.001z" />
+                            </svg>
+                            Resort
+                        </a></li>
+                    <li><a href="../campaigns/campaigns.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-speakerphone">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M18 8a3 3 0 0 1 0 6" />
+                                <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+                                <path
+                                    d="M12 8h0l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+                            </svg>
+                            Campaigns
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Analysis (50/50)
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Sentiment
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Compare Bbrand
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Competitor Research
+                        </a></li>
+                    <li><a href="#">Youtube Report: 14/50</a></li>
+                    <li><a href="#">Instagram Report: 1/50</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <div class="right-main">
+            <header class="site-header">
+                <div class="header-container">
+                    <div class="logo-wrapper">
+                        <img src="https://www.transparentpng.com/thumb/man/vkarWM-download-man-png-image-png-image-freepngimg.png"
+                            alt="Logo" class="site-logo" />
+                    </div>
+
+                    <div class="user-info">
+                        <div class="user-name">Pawan</div>
+                        <div class="user-role">Brand Account</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="search-cont-top">
+                <div class="form-inner-heading">List</div>
+
+                <div class="top-head-right"><span>Dashboard</span> <span><svg xmlns="http://www.w3.org/2000/svg"
+                            width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
+                            <path d="m6 17 5-5-5-5" />
+                            <path d="m13 17 5-5-5-5" />
+                        </svg></span> <span>List</span></div>
+            </div>
+
+            <div class="list-section">
+                <div class="list-header">
+                    <div class="list-header__title">All List</div>
+                    <div class="list-header__controls">
+                        <select name="" id="" class="list-header__select">
+                            <option value="Platform">Platform</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Tiktok">Tiktok</option>
+                            <option value="Youtube">Youtube</option>
+                            <option value="Twitch">Twitch</option>
+                        </select>
+                        <select name="" id="" class="list-header__select">
+                            <option value="Sort">Sort</option>
+                            <option value="Created Date">Created Date</option>
+                            <option value="Influencer">Influencer</option>
+                        </select>
+                        <button class="list-header__create-btn">Create</button>
+                    </div>
+                </div>
+
+                <div class="list-table">
+                    <table class="list-table__table">
+                        <thead class="list-table__head">
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Influencers</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list-table__body">
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="list-footer">
+                    <div class="list-footer__info">
+                        <!-- Showing 1 to 2 of 2 lists -->
+
+                    </div>
+                    <div class="list-footer__results">
+                        <select name="" id="" class="list-footer__select">
+                            <option value="">Result</option>
+                            <option value="">30</option>
+                            <option value="">60</option>
+                            <option value="">90</option>
+                        </select>
+
+                        <div class="list-footer__results-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-list-modal">
+                <div class="create-list-modal__container">
+                    <div class="create-list-modal__header">
+                        <div class="create-list-modal__title">Create</div>
+                        <div class="create-list-modal__close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <form action="" class="create-list-modal__form">
+                        <div class="create-list-modal__form-group">
+                            <div class="create-list-modal__label">Choose platform</div>
+                            <select name="" id="" class="create-list-modal__select">
+                                <option value="Youtube" selected>Youtube</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Tiktok">Tiktok</option>
+                                <option value="Twitch">Twitch</option>
+                            </select>
+                        </div>
+
+                        <div class="create-list-modal__form-group">
+                            <label for="lname" class="create-list-modal__label">List name</label>
+                            <input type="text" placeholder="Last name" id="lname" class="create-list-modal__input">
+                            <span class="error-msg"></span> <!-- Error message -->
+                        </div>
+
+                        <div class="create-list-modal__form-group">
+                            <label for="ldisc" class="create-list-modal__label">List description</label>
+                            <textarea id="ldisc" class="create-list-modal__textarea"></textarea>
+                            <span class="error-msg"></span>
+                        </div>
+
+
+                        <div class="create-list-modal__actions">
+                            <button type="button"
+                                class="create-list-modal__button create-list-modal__button--cancel">Cancel</button>
+
+                            <button class="create-list-modal__button create-list-modal__button--create">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="footer">
+                <p>Copyright © <a href="#">Dreabee</a>. Designed with by <a href="#">Dreabee</a> All rights reserved</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const formList = document.querySelector('.create-list-modal');
+        const mainBox = document.querySelector('.create-list-modal__container');
+        const listBtnC = document.querySelector('.create-list-modal__close');
+        const listBtnO = document.querySelector('.list-header__create-btn');
+        const form = document.querySelector('.create-list-modal__form');
+        const listName = document.getElementById('lname');
+        const listDesc = document.getElementById('ldisc');
+        const tableBody = document.querySelector('.list-table__body');
+        const platformSelect = document.querySelector('.create-list-modal__select');
+        const createBtn = document.querySelector('.create-list-modal__button--create');
+        const modelCancle = document.querySelector('.create-list-modal__button--cancel');
+        const footerInfo = document.querySelector('.list-footer__info');
+        const resultSelect = document.querySelector('.list-footer__select');
+
+        let serialNo = 1;
+        let editingRow = null;
+
+        const platformIcons = {
+            Youtube: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#CD201F" class="bi bi-youtube" viewBox="0 0 16 16">
+                      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg>`,
+            Instagram: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e1306c" class="bi bi-instagram" viewBox="0 0 16 16">
+                         <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>`,
+            Tiktok: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-tiktok" viewBox="0 0 16 16">
+                      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>`,
+            Twitch: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6441a5" class="bi bi-twitch" viewBox="0 0 16 16">
+                       <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"/>
+                        <path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"/></svg>`
+        };
+
+        listBtnO.addEventListener('click', () => {
+            form.reset();
+            createBtn.textContent = 'Create';
+            editingRow = null;
+            formList.classList.add('active');
+        });
+
+        listBtnC.addEventListener('click', () => {
+            formList.classList.remove('active');
+            editingRow = null;
+            createBtn.textContent = 'Create';
+        });
+
+        modelCancle.addEventListener('click', () => {
+            formList.classList.remove('active');
+            editingRow = null;
+            createBtn.textContent = 'Create';
+        });
+
+        formList.addEventListener('click', (e) => {
+            if (!mainBox.contains(e.target)) {
+                formList.classList.remove('active');
+                editingRow = null;
+                createBtn.textContent = 'Create';
+            }
+        });
+
+        function validateField(field, message) {
+            const value = field.value.trim();
+            const span = field.nextElementSibling;
+
+            if (value === '') {
+                span.textContent = message;
+                field.classList.add('error');
+                return false;
+            } else {
+                span.textContent = '';
+                field.classList.remove('error');
+                return true;
+            }
+        }
+
+        function updateFooterInfo() {
+            const total = document.querySelectorAll('.list-table__body tr').length;
+            const showing = total > 0 ? `1 to ${total}` : '0 to 0';
+
+            footerInfo.innerHTML = `
+        Showing ${showing} of ${total} lists
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right">
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+        </svg>
+    `;
+        }
+
+        listName.addEventListener('input', () => validateField(listName, 'List name is required'));
+        listDesc.addEventListener('input', () => validateField(listDesc, 'List description is required'));
+        listName.addEventListener('blur', () => validateField(listName, 'List name is required'));
+        listDesc.addEventListener('blur', () => validateField(listDesc, 'List description is required'));
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            setTimeout(updateFooterInfo, 0); // wait for DOM update
+
+            const validName = validateField(listName, 'List name is required');
+            const validDesc = validateField(listDesc, 'List description is required');
+
+            if (!validName) return listName.focus();
+            if (!validDesc) return listDesc.focus();
+
+            const name = listName.value.trim();
+            const desc = listDesc.value.trim();
+            const platform = platformSelect.value;
+
+            // If editing
+            if (editingRow) {
+                editingRow.querySelector('.list-table__name').textContent = name;
+                editingRow.children[2].textContent = desc;
+                editingRow.querySelector('.list-table__icon').outerHTML = platformIcons[platform] || '';
+                editingRow = null;
+                createBtn.textContent = 'Create';
+            } else {
+                // New row
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                <td>${serialNo++}</td>
+                <td>
+                    <a href="#" class="list-table__link">
+                        ${platformIcons[platform] || ''}
+                        <span class="list-table__name">${name}</span>
+                    </a>
+                </td>
+                <td>${desc}</td>
+                <td>0</td>
+                <td>
+                    <span class="list-table__actions">
+                        <button class="list-table__edit-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-pencil-line-icon lucide-pencil-line">
+                                                <path d="M12 20h9" />
+                                                <path
+                                                    d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" />
+                                                <path d="m15 5 3 3" />
+                                            </svg>
+                            </button>
+                        <button class="list-table__delete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-trash2-icon lucide-trash-2">
+                                                <path d="M3 6h18" />
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                <line x1="10" x2="10" y1="11" y2="17" />
+                                                <line x1="14" x2="14" y1="11" y2="17" />
+                                            </svg>
+                            </button>
+                    </span>
+                </td>
+            `;
+                tableBody.appendChild(newRow);
+            }
+
+            form.reset();
+            formList.classList.remove('active');
+        });
+
+
+        tableBody.addEventListener('click', function (e) {
+            const deleteBtn = e.target.closest('.list-table__delete-btn');
+            const editBtn = e.target.closest('.list-table__edit-btn');
+
+            if (e.target.closest('.list-table__delete-btn')) {
+                setTimeout(updateFooterInfo, 0);
+            }
+
+            if (deleteBtn) {
+                const row = deleteBtn.closest('tr');
+                const listName = row.querySelector('.list-table__name')?.textContent || 'this list';
+
+                const confirmDelete = confirm(`Are you sure you want to delete "${listName}"?`);
+
+                if (confirmDelete) {
+                    row.remove();
+                }
+            }
+
+
+            if (editBtn) {
+                const row = editBtn.closest('tr');
+                const name = row.querySelector('.list-table__name').textContent;
+                const desc = row.children[2].textContent;
+                const icon = row.querySelector('.list-table__icon');
+
+                listName.value = name;
+                listDesc.value = desc;
+                platformSelect.value = getPlatformFromIcon(icon);
+
+                editingRow = row;
+                createBtn.textContent = 'Save';
+                formList.classList.add('active');
+            }
+        });
+
+        // Optional: Result per page change (basic logic)
+        resultSelect.addEventListener('change', () => {
+            const limit = parseInt(resultSelect.value);
+            const rows = document.querySelectorAll('.list-table__body tr');
+            rows.forEach((row, index) => {
+                row.style.display = index < limit ? '' : 'none';
+            });
+            updateFooterInfo();
+        });
+
+        function getPlatformFromIcon(iconEl) {
+            if (!iconEl) return 'Youtube';
+            const src = iconEl.getAttribute('src') || '';
+            if (src.includes('youtube')) return 'Youtube';
+            if (src.includes('instagram')) return 'Instagram';
+            if (src.includes('tiktok')) return 'Tiktok';
+            if (src.includes('twitch')) return 'Twitch';
+            return 'Youtube';
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!-- brand.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brand Details</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .brand-card { background: #f3f3f3; padding: 20px; border-radius: 10px; max-width: 600px; }
+  </style>
+</head>
+<body>
+  <h1>Brand Details</h1>
+  <div id="brand-container" class="brand-card">Loading...</div>
+
+  <script>
+    // 1. Dummy data simulate kar rahe hain (aap chahe to API se bhi fetch kar sakte ho)
+    const brandData = {
+      "On": {
+        name: "On",
+        category: "Retail",
+        influencers: "1.86M",
+        budget: "161.88B - 526.12B",
+        description: "On set out to shake up the running industry with a single transformative product..."
+      },
+      "You": {
+        name: "YOU",
+        category: "Health & Wellness",
+        influencers: "1.63M",
+        budget: "255.77B",
+        description: "YOU offers the best hair care products made from clean ingredients."
+      },
+      "TheYou": {
+        name: "THE YOU",
+        category: "Health & Wellness",
+        influencers: "1.63M",
+        budget: "255.77B",
+        description: "THE YOU provides premium wellness solutions for everyday life."
+      }
+    };
+
+    // 2. Get brand slug from URL query
+    const urlParams = new URLSearchParams(window.location.search);
+    const brandSlug = urlParams.get("brand");
+
+    const container = document.getElementById("brand-container");
+
+    // 3. Show dynamic data based on brand
+    if (brandSlug && brandData[brandSlug]) {
+      const data = brandData[brandSlug];
+      container.innerHTML = `
+        <h2>${data.name}</h2>
+        <p><strong>Category:</strong> ${data.category}</p>
+        <p><strong>Influencers:</strong> ${data.influencers}</p>
+        <p><strong>Budget:</strong> ${data.budget}</p>
+        <p><strong>Description:</strong> ${data.description}</p>
+        <a href="index.html">← Back to List</a>
+      `;
+    } else {
+      container.innerHTML = `<p>No data found for brand: ${brandSlug}</p><a href="index.html">← Back</a>`;
+    }
+  </script>
+</body>
+</html>

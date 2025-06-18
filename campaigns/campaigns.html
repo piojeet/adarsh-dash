@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="Sidebar">
+                <div class="left-side-logo">
+                    <a href="#"><img src="" alt="Logo"></a>
+                </div>
+                <ul class="side-bar-menu">
+                    <li><a href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                            Dashboard
+                        </a></li>
+                    <li><a href="../search/search.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                            Search (8/50)
+                        </a></li>
+                    <li><a href="list.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 6l11 0" />
+                                <path d="M9 12l11 0" />
+                                <path d="M9 18l11 0" />
+                                <path d="M5 6l0 .01" />
+                                <path d="M5 12l0 .01" />
+                                <path d="M5 18l0 .01" />
+                            </svg>
+                            Lists
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-file-analytics">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-3 10a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m3 4a1 1 0 0 0 -1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0 -1 -1m3 -2a1 1 0 0 0 -1 1v3a1 1 0 0 0 2 0v-3a1 1 0 0 0 -1 -1" />
+                                <path d="M19 7h-4l-.001 -4.001z" />
+                            </svg>
+                            Resort
+                        </a></li>
+                    <li><a href="#" class="active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-speakerphone">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M18 8a3 3 0 0 1 0 6" />
+                                <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+                                <path
+                                    d="M12 8h0l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+                            </svg>
+                            Campaigns
+                        </a></li>
+                    <li><a href="../brands/brands.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Analysis (50/50)
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Sentiment
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Compare Bbrand
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Competitor Research
+                        </a></li>
+                    <li><a href="#">Youtube Report: 14/50</a></li>
+                    <li><a href="#">Instagram Report: 1/50</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <div class="right-main">
+            <header class="site-header">
+                <div class="header-container">
+                    <div class="logo-wrapper">
+                        <img src="https://www.transparentpng.com/thumb/man/vkarWM-download-man-png-image-png-image-freepngimg.png"
+                            alt="Logo" class="site-logo" />
+                    </div>
+
+                    <div class="user-info">
+                        <div class="user-name">Pawan</div>
+                        <div class="user-role">Brand Account</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="search-cont-top">
+                <div class="form-inner-heading">Campaigns <span></span></div>
+
+                <div class="top-head-right"><span>Dashboard</span> <span><svg xmlns="http://www.w3.org/2000/svg"
+                            width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
+                            <path d="m6 17 5-5-5-5" />
+                            <path d="m13 17 5-5-5-5" />
+                        </svg></span> <span>Campaigns</span></div>
+            </div>
+
+            <div class="campaign-wrapper">
+
+                <div class="campaign-header">
+                    <button class="campaign-header__create-button">
+                        Create
+                    </button>
+                </div>
+
+                <div class="campaign-list">
+                    <div class="campaign-card-box">
+                        <div class="campaign-card__top">
+                            <div class="campaign-card__info">
+                                <div class="campaign-card__icon">
+
+                                </div>
+
+                                <div class="campaign-card__details">
+                                    <h3 class="campaign-card__title">Instagram Campaign</h3>
+                                    <div class="campaign-card__tags">
+                                        <div class="campaign-card__platform">Instagram</div>
+                                        <div class="campaign-card__rating-star">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z" />
+                                            </svg>
+                                        </div>
+                                        <div class="campaign-card__verified">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#26BF94" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="campaign-card__ratings">Ratings <span
+                                            class="campaign-card__ratings-value"></span></div>
+                                </div>
+                            </div>
+                            <button class="campaign-card__delete-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                    <line x1="10" x2="10" y1="11" y2="17" />
+                                    <line x1="14" x2="14" y1="11" y2="17" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="campaign-card__middle">
+                            <div class="campaign-card__stats">
+                                <div class="campaign-card__stat"><span>Budget :</span> <span>0</span></div>
+                                <div class="campaign-card__stat"><span>Influencers : </span><span>1</span></div>
+                                <div class="campaign-card__stat"><span>Posts : </span><span>2</span></div>
+                            </div>
+
+                            <div class="campaign-card__audience">
+                                <span>Audience : </span> <span>Male 60%, Age 18-35</span>
+                            </div>
+                        </div>
+
+                        <div class="campaign-card__bottom">
+                            <div class="campaign-card__created">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-calendar-days-icon lucide-calendar-days">
+                                    <path d="M8 2v4" />
+                                    <path d="M16 2v4" />
+                                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                                    <path d="M3 10h18" />
+                                    <path d="M8 14h.01" />
+                                    <path d="M12 14h.01" />
+                                    <path d="M16 14h.01" />
+                                    <path d="M8 18h.01" />
+                                    <path d="M12 18h.01" />
+                                    <path d="M16 18h.01" />
+                                </svg>
+                                <span>Created At : </span> <span>30 May 2025</span>
+                            </div>
+
+                            <div class="campaign-card__metrics">
+                                <div class="campaign-card__metrics-views">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                                        <path
+                                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                                    </svg>
+                                    <span>Views : </span> <span>0</span>
+                                </div>
+                                <div class="campaign-card__metrics-cpv">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor"
+                                        class="bi bi-wallet" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1" />
+                                    </svg>
+                                    <span>CPV : <span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="list-footer">
+                    <div class="list-footer__info">
+                        <!-- Showing 1 to 2 of 2 lists -->
+
+                    </div>
+                    <div class="list-footer__results">
+                        <select name="" id="" class="list-footer__select">
+                            <option value="">Result</option>
+                            <option value="">30</option>
+                            <option value="">60</option>
+                            <option value="">90</option>
+                        </select>
+
+                        <div class="list-footer__results-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="campaign-form-wrapper">
+                <div class="campaign-form-container">
+                    <form action="" class="campaign-form">
+                        <div class="campaign-form__section campaign-form__basic-details">
+                            <div class="campaign-form__section-title">Basic details</div>
+                            <div class="campaign-form__box">
+                                <div class="campaign-form__row">
+                                    <div class="campaign-form__field-group">
+                                        <div class="campaign-form__label">Platform</div>
+                                        <div class="campaign-form__input">
+                                            <select id="platform">
+                                                <option value="Chouse..." selected>Chouse...</option>
+                                                <option value="Instagram">Instagram</option>
+                                                <option value="Youtube">Youtube</option>
+                                                <option value="Youtube" disabled>Tiktok(cooming soon)</option>
+                                                <option value="Youtube" disabled>Twitch(cooming soon)</option>
+                                            </select>
+                                            <span class="campaign-form__input-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                                                    <path d="m6 9 6 6 6-6" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="campaign-form__field-group">
+                                        <div class="campaign-form__label">Objective</div>
+                                        <div class="campaign-form__input">
+                                            <select id="objective">
+                                                <option value="Chouse..." selected>Chouse...</option>
+                                                <option value="Awareness">Awareness</option>
+                                                <option value="Conversation">Conversation</option>
+                                                <option value="Product seeding">Product seeding</option>
+                                            </select>
+                                            <span class="campaign-form__input-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                                                    <path d="m6 9 6 6 6-6" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="campaign-form__field-group">
+                                    <label for="cname" class="campaign-form__label">Name</label>
+                                    <input type="text" id="cname" placeholder="Campaign name"
+                                        class="campaign-form__input">
+                                </div>
+                                <div class="campaign-form__field-group">
+                                    <label for="cdescription" class="campaign-form__label">Description</label>
+                                    <textarea placeholder="Campaign description" class="campaign-form__textarea"
+                                        id="cdescription"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-form__section campaign-form__promotion-details">
+                            <div class="campaign-form__section-title">Promotion details</div>
+
+                            <div class="campaign-form__box">
+                                <div class="campaign-form__field-group">
+                                    <label for="ckeyboard" class="campaign-form__label">Keywords</label>
+                                    <textarea id="ckeyboard"
+                                        placeholder="wirte comma separated keywords to be inclused in the post"
+                                        class="campaign-form__textarea"></textarea>
+                                </div>
+
+                                <div class="campaign-form__checkbox-group">
+                                    <input type="checkbox" id="creatorkey">
+                                    <label for="creatorkey"> Notify me if a creator misses any of these
+                                        keywords.</label>
+                                </div>
+
+                                <div class="campaign-form__checkbox-group">
+                                    <input type="checkbox" id="notidis">
+                                    <label for="notidis">Notify me if the influencer forgets the ad disclosure.</label>
+                                </div>
+
+                                <div class="campaign-form__row">
+                                    <div class="campaign-form__field-group">
+                                        <div class="campaign-form__label">Date from when your campaign will start.</div>
+                                        <input type="date" class="campaign-form__input" id="campdate">
+                                    </div>
+                                    <div class="campaign-form__field-group">
+                                        <label class="campaign-form__label" for="pbudget">Planned budget</label>
+                                        <input type="number" class="campaign-form__input" id="pbudget">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-form__section campaign-form__influencers">
+                            <div class="campaign-form__section-title">Choose influencers</div>
+
+                            <div class="campaign-form__box">
+                                <div class="campaign-form__field-group">
+                                    <div class="campaign-form__label">Select one or multiple lists</div>
+                                    <div class="campaign-form__input">
+                                        <select id="multilist">
+                                            <option value="Chouse..." selected>Chouse...</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-form__field-group">
+                                    <div class="campaign-form__label">Or, upload CSV(Max 100 influencers)Template</div>
+                                    <label>
+                                        <input type="file" class="campaign-form__input" id="csvtem">
+                                    </label>
+                                </div>
+
+                                <div class="campaign-form__field-group">
+                                    <label for="inmanually" class="campaign-form__label">Or, add influencers
+                                        manually</label>
+                                    <textarea id="inmanually" placeholder="Search influencers"
+                                        class="campaign-form__textarea"></textarea>
+                                </div>
+
+                                <div class="campaign-form__field-group">
+                                    <label for="nouse" class="campaign-form__label">ABCD(not in use)</label>
+                                    <input type="number" id="nouse" placeholder="Not in use"
+                                        class="campaign-form__input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-form__section campaign-form__audience">
+                            <div class="campaign-form__section-title">Target Audience</div>
+
+                            <div class="campaign-form__box">
+                                <div class="campaign-form__row">
+                                    <div class="campaign-form__field-group">
+                                        <div class="campaign-form__label">Target Audience Countries</div>
+                                        <div class="campaign-form__input">
+                                            <input type="text" placeholder="Select country" id="targetaud">
+                                        </div>
+                                    </div>
+                                    <div class="campaign-form__field-group">
+                                        <div class="campaign-form__label">Target Audience Age Groups</div>
+                                        <div class="campaign-form__input">
+                                            <input type="text" placeholder="Select age" id="targetage">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-form__field-group">
+                                    <div class="campaign-form__label">Target Audience Categories</div>
+                                    <div class="campaign-form__input">
+                                        <input type="text" placeholder="Select categories" id="targetcateg">
+                                    </div>
+                                </div>
+
+                                <div class="campaign-form__field-group">
+                                    <div class="campaign-form__label">Target Audience Gender Ratio</div>
+                                    <div class="campaign-form__input">
+                                        <label for="malep">Male %</label>
+                                        <input type="text" id="malep">
+                                    </div>
+                                </div>
+
+                                <div class="campaign-form__field-group">
+                                    <label for="fmalep" class="campaign-form__label">Female %</label>
+                                    <input type="text" class="campaign-form__input" id="fmalep">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-form__section campaign-form__expected-results">
+                            <div class="campaign-form__section-title">Expected results</div>
+
+                            <div class="campaign-form__box">
+                                <div class="campaign-form__row">
+                                    <div class="campaign-form__field-group">
+                                        <label for="expviews" class="campaign-form__label">Expected Views</label>
+                                        <input type="number" placeholder="Expected views" id="expviews"
+                                            class="campaign-form__input">
+                                    </div>
+                                    <div class="campaign-form__field-group">
+                                        <label for="expcpv" class="campaign-form__label">Expected CPV</label>
+                                        <input type="number" placeholder="Expected CPV" id="expcpv"
+                                            class="campaign-form__input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-form__submit">
+                            <button class="campaign-form__cancle-button">Cancle</button>
+                            <button class="campaign-form__create-button">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <div class="footer">
+                <p>Copyright © <a href="#">Dreabee</a>. Designed with by <a href="#">Dreabee</a> All rights reserved</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const cCreateBtn = document.querySelector('.campaign-header__create-button');
+        const cCancleBtn = document.querySelector('.campaign-form__cancle-button');
+        const formCreateBtn = document.querySelector('.campaign-form__create-button');
+        const cwaper = document.querySelector('.campaign-form-wrapper');
+        const cform = document.querySelector('.campaign-form');
+        const cmainBox = document.querySelector('.campaign-form-container');
+        const campaignList = document.querySelector(".campaign-list");
+
+        const requiredFields = [
+            { id: 'platform', type: 'select' },
+            { id: 'objective', type: 'select' },
+            { id: 'cname', type: 'text' },
+            { id: 'cdescription', type: 'text' },
+            { id: 'ckeyboard', type: 'text' },
+            { id: 'campdate', type: 'date' },
+            { id: 'pbudget', type: 'number' },
+            { id: 'targetaud', type: 'text' },
+            { id: 'targetage', type: 'text' },
+            { id: 'targetcateg', type: 'text' },
+            { id: 'malep', type: 'text' },
+            { id: 'fmalep', type: 'text' },
+            { id: 'expviews', type: 'number' },
+            { id: 'expcpv', type: 'number' }
+        ];
+
+        const platformIcons = {
+            Instagram: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+            Youtube: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+</svg>`,
+        };
+
+        function showError(field, message) {
+            field.classList.add('error-input');
+            let existingError = field.parentElement.querySelector('.error-message');
+            if (!existingError) {
+                const error = document.createElement('div');
+                error.className = 'error-message';
+                error.style.color = 'red';
+                error.style.fontSize = '12px';
+                error.innerText = message;
+                field.parentElement.appendChild(error);
+            }
+        }
+
+        function clearError(field) {
+            field.classList.remove('error-input');
+            const error = field.parentElement.querySelector('.error-message');
+            if (error) error.remove();
+        }
+
+        function validateForm() {
+            let isValid = true;
+            requiredFields.forEach(item => {
+                const field = document.getElementById(item.id);
+                if ((item.type === 'select' && field.value === 'Chouse...') ||
+                    (item.type !== 'select' && field.value.trim() === '')) {
+                    showError(field, `${field.previousElementSibling?.innerText || 'This'} is required`);
+                    isValid = false;
+                } else {
+                    clearError(field);
+                }
+            });
+            return isValid;
+        }
+
+        requiredFields.forEach(item => {
+            const field = document.getElementById(item.id);
+            field.addEventListener('input', () => {
+                if ((item.type === 'select' && field.value !== 'Chouse...') ||
+                    (item.type !== 'select' && field.value.trim() !== '')) {
+                    clearError(field);
+                }
+            });
+        });
+
+        cCreateBtn.addEventListener('click', () => {
+            cform.reset();
+            document.querySelectorAll('.error-message').forEach(e => e.remove());
+            document.querySelectorAll('.error-input').forEach(f => f.classList.remove('error-input'));
+            cwaper.classList.add('active');
+        });
+
+        cCancleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            cform.reset();
+            cwaper.classList.remove('active');
+        });
+
+        cwaper.addEventListener('click', (e) => {
+            if (!cmainBox.contains(e.target)) {
+                cform.reset();
+                cwaper.classList.remove('active');
+            }
+        });
+
+        function createCampaignCard(data) {
+            const today = new Date().toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+            });
+
+            const card = document.createElement("div");
+            card.classList.add("campaign-card-box");
+            card.innerHTML = `
+            <div class="campaign-card__top">
+                            <div class="campaign-card__info">
+                                <div class="campaign-card__icon">
+${platformIcons[data.platform] || ""}
+                                </div>
+
+                                <div class="campaign-card__details">
+                                    <h3 class="campaign-card__title">${data.campaignName}</h3>
+                                    <div class="campaign-card__tags">
+                                        <div class="campaign-card__platform">${data.platform}</div>
+                                        <div class="campaign-card__rating-star">
+                                            ${data.rating}
+                                        </div>
+                                        <div class="campaign-card__verified">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#26BF94" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="campaign-card__ratings">Ratings <span
+                                            class="campaign-card__ratings-value">(180)</span></div>
+                                </div>
+                            </div>
+                            <button class="campaign-card__delete-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                    <line x1="10" x2="10" y1="11" y2="17" />
+                                    <line x1="14" x2="14" y1="11" y2="17" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="campaign-card__middle">
+                            <div class="campaign-card__stats">
+                                <div class="campaign-card__stat"><span>Budget :</span> <span>${data.budget}</span></div>
+                                <div class="campaign-card__stat"><span>Influencers : </span><span>1</span></div>
+                                <div class="campaign-card__stat"><span>Posts : </span><span>2</span></div>
+                            </div>
+
+                            <div class="campaign-card__audience">
+                                <span>Audience : </span> <span>${data.audience}</span>
+                            </div>
+                        </div>
+
+                        <div class="campaign-card__bottom">
+                            <div class="campaign-card__created">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-calendar-days-icon lucide-calendar-days">
+                                    <path d="M8 2v4" />
+                                    <path d="M16 2v4" />
+                                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                                    <path d="M3 10h18" />
+                                    <path d="M8 14h.01" />
+                                    <path d="M12 14h.01" />
+                                    <path d="M16 14h.01" />
+                                    <path d="M8 18h.01" />
+                                    <path d="M12 18h.01" />
+                                    <path d="M16 18h.01" />
+                                </svg>
+                                <span>Created At : </span> <span>${today}</span>
+                            </div>
+
+                            <div class="campaign-card__metrics">
+                                <div class="campaign-card__metrics-views">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                                        <path
+                                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                                    </svg>
+                                    <span>Views : </span> <span>${data.views}</span>
+                                </div>
+                                <div class="campaign-card__metrics-cpv">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor"
+                                        class="bi bi-wallet" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1" />
+                                    </svg>
+                                    <span>CPV : <span>${data.cpv}</span></span>
+                                </div>
+                            </div>
+                        </div>
+        `;
+            card.querySelector(".campaign-card__delete-button").addEventListener("click", () => card.remove());
+            campaignList.prepend(card);
+        }
+
+        formCreateBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (validateForm()) {
+                const data = {
+                    platform: document.getElementById("platform").value,
+                    campaignName: document.getElementById("cname").value,
+                    rating: `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z" />
+                                            </svg>
+                `,
+                    audience: `${document.getElementById("malep").value}% Male, ${document.getElementById("fmalep").value}% Female`,
+                    budget: document.getElementById("pbudget").value,
+                    views: document.getElementById("expviews").value,
+                    cpv: document.getElementById("expcpv").value
+                };
+                createCampaignCard(data);
+                cwaper.classList.remove('active');
+                cform.reset();
+            } else {
+                alert('Please fill all required fields!');
+            }
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="Sidebar">
+                <div class="left-side-logo">
+                    <a href="#"><img src="" alt="Logo"></a>
+                </div>
+                <ul class="side-bar-menu">
+                    <li><a href="index.html" class="active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                            Dashboard
+                        </a></li>
+                    <li><a href="search/search.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                            Search (8/50)
+                        </a></li>
+                    <li><a href="list/list.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 6l11 0" />
+                                <path d="M9 12l11 0" />
+                                <path d="M9 18l11 0" />
+                                <path d="M5 6l0 .01" />
+                                <path d="M5 12l0 .01" />
+                                <path d="M5 18l0 .01" />
+                            </svg>
+                            Lists
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-file-analytics">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-3 10a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m3 4a1 1 0 0 0 -1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0 -1 -1m3 -2a1 1 0 0 0 -1 1v3a1 1 0 0 0 2 0v-3a1 1 0 0 0 -1 -1" />
+                                <path d="M19 7h-4l-.001 -4.001z" />
+                            </svg>
+                            Resort
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-speakerphone">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M18 8a3 3 0 0 1 0 6" />
+                                <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+                                <path
+                                    d="M12 8h0l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+                            </svg>
+                            Campaigns
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Analysis (50/50)
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Sentiment
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Compare Bbrand
+                        </a></li>
+                    <li><a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Competitor Research
+                        </a></li>
+                    <li><a href="#">Youtube Report: 14/50</a></li>
+                    <li><a href="#">Instagram Report: 1/50</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <div class="right-main">
+            <header class="site-header">
+                <div class="header-container">
+                    <div class="logo-wrapper">
+                        <img src="https://www.transparentpng.com/thumb/man/vkarWM-download-man-png-image-png-image-freepngimg.png"
+                            alt="Logo" class="site-logo" />
+                    </div>
+
+                    <div class="user-info">
+                        <div class="user-name">Pawan</div>
+                        <div class="user-role">Brand Account</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-wrapper">
+                <div class="dashboard-title">Dashboard</div>
+
+                <div class="campaign-card">
+                    <div class="campaign-info">
+                        <div class="hcampaign-header">
+                            <div class="campaign-name">Lenskart Youtube</div>
+                            <div class="campaign-count">6</div>
+                            <div class="campaign-label">INFLUENCERS</div>
+                            <div class="campaign-link">
+                                <a href="#">Show all campaigns <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="campaign-social">
+                            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <div class="hcampaign-header">
+                            <div class="campaign-name">Lenskart Youtube</div>
+                            <div class="campaign-count">6</div>
+                            <div class="campaign-label">INFLUENCERS</div>
+                            <div class="campaign-link">
+                                <a href="#">Show all campaigns <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="campaign-social">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <div class="hcampaign-header">
+                            <div class="campaign-name">Lenskart Youtube</div>
+                            <div class="campaign-count">6</div>
+                            <div class="campaign-label">INFLUENCERS</div>
+                            <div class="campaign-link">
+                                <a href="#">Show all campaigns <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="campaign-social">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <div class="hcampaign-header">
+                            <div class="campaign-name">Lenskart Youtube</div>
+                            <div class="campaign-count">6</div>
+                            <div class="campaign-label">INFLUENCERS</div>
+                            <div class="campaign-link">
+                                <a href="#">Show all campaigns <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="campaign-social">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platforms-section">
+                <div class="platforms-header">
+                    <div class="platforms-title">Platforms</div>
+                    <div class="platforms-view-all">
+                        <a href="#">View All</a>
+                    </div>
+                </div>
+
+                <div class="platforms-list">
+                    <a href="#" class="platform-card">
+                        <img src="assets/youtube.svg" alt="icon" class="platform-icon">
+                        <span class="platform-count">13.77M+ Influencers</span>
+                        <span class="platform-name">Youtube</span>
+                    </a>
+                    <a href="#" class="platform-card">
+                        <img src="assets/youtube.svg" alt="icon" class="platform-icon">
+                        <span class="platform-count">13.77M+ Influencers</span>
+                        <span class="platform-name">Youtube</span>
+                    </a>
+                    <a href="#" class="platform-card">
+                        <img src="assets/youtube.svg" alt="icon" class="platform-icon">
+                        <span class="platform-count">13.77M+ Influencers</span>
+                        <span class="platform-name">Youtube</span>
+                    </a>
+                    <a href="#" class="platform-card">
+                        <img src="assets/youtube.svg" alt="icon" class="platform-icon">
+                        <span class="platform-count">13.77M+ Influencers</span>
+                        <span class="platform-name">Youtube</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="brand-section">
+                <!-- Brand Card Start -->
+                <div class="brand-card">
+                    <div class="brand-card-box">
+                        <div class="brand-info">
+                            <div class="brand-image-wrapper">
+                                <img src="assets/picture.jpg" alt="icon" class="brand-image">
+                            </div>
+                            <div class="brand-details">
+                                <a href="#" class="brand-name">
+                                    Anfaal International <span class="brand-verified"><i
+                                            class="fa-solid fa-circle-check"></i></span>
+                                </a>
+                                <div class="brand-meta">
+                                    <a href="#" class="brand-category">Apparel & fashion</a>
+                                    <span class="brand-location">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2">
+                                            </path>
+                                            <path
+                                                d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6">
+                                            </path>
+                                        </svg> India
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="brand-card-social-links">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <p class="brand-description">
+                        We are over a thirty year in Manufacturing Genuine Leather & Leather Goods business. We make
+                        Finished Leather any types (Grain & Split). In Goods: Leather Ba...
+                    </p>
+
+                    <div class="brand-stats">
+                        <div class="brand-stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Influencers</div>
+                        </div>
+                        <div class="brand-stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Influencers</div>
+                        </div>
+                        <div class="brand-stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Influencers</div>
+                        </div>
+                    </div>
+
+                    <div class="brand-charts">
+                        <div class="chart-block">
+                            <div class="chart-title">Influencers Category</div>
+                            <div class="chart-wrapper">
+                                <div id="chart"></div>
+                            </div>
+                        </div>
+                        <div class="chart-block">
+                            <div class="chart-title">Influencers Category</div>
+                            <div class="chart-wrapper">
+                                <div id="chart2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Brand Card End -->
+
+                <!-- Brand Card Copy -->
+                <!-- Same structure with unique chart IDs -->
+                <!-- <div class="brand-card">
+                    <div class="brand-card-box">
+                        <div class="brand-info">
+                            <div class="brand-image-wrapper">
+                                <img src="assets/picture.jpg" alt="icon" class="brand-image">
+                            </div>
+                            <div class="brand-details">
+                                <a href="#" class="brand-name">
+                                    Anfaal International <span class="brand-verified"><i
+                                            class="fa-solid fa-circle-check"></i></span>
+                                </a>
+                                <div class="brand-meta">
+                                    <a href="#" class="brand-category">Apparel & fashion</a>
+                                    <span class="brand-location">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2">
+                                            </path>
+                                            <path
+                                                d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6">
+                                            </path>
+                                        </svg> India
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="brand-card-social-links">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <p class="brand-description">
+                        We are over a thirty year in Manufacturing Genuine Leather & Leather Goods business. We make
+                        Finished Leather any types (Grain & Split). In Goods: Leather Ba...
+                    </p>
+
+                    <div class="brand-stats">
+                        <div class="brand-stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Influencers</div>
+                        </div>
+                        <div class="brand-stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Influencers</div>
+                        </div>
+                        <div class="brand-stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Influencers</div>
+                        </div>
+                    </div>
+
+                    <div class="brand-charts">
+                        <div class="chart-block">
+                            <div class="chart-title">Influencers Category</div>
+                            <div class="chart-wrapper">
+                                <div id="chart3"></div>
+                            </div>
+                        </div>
+                        <div class="chart-block">
+                            <div class="chart-title">Influencers Category</div>
+                            <div class="chart-wrapper">
+                                <div id="chart4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+
+            <div class="recommended-influencers-container">
+                <div class="chart-title recommended-influencers-title">Recommended Influencers</div>
+
+                <div class="table-wrapper">
+                    <table class="influencer-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Subscribers</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Country</th>
+                                <th scope="col">ER</th>
+                                <th scope="col">Avg Views</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="influencer-title">
+                                        <div class="influencer-img-placeholder"><img src="https://yt3.ggpht.com/WUZKUO7oo8hWoH8ToNA4aZoExVMfB6sQ4WHpzDKw6EWHrm6A5gE5hfTL-EoGXgwnI0f1Y1HyGQ=s800-c-k-c0x00ffffff-no-rj" alt=""></div>
+                                        <div class="influencer-name"><a href="#">Glebo</a></div>
+                                    </div>
+                                </td>
+                                <td><span class="subscriber-count">14.10M</span></td>
+                                <td><span class="category">Gaming</span></td>
+                                <td><span class="country">United States</span></td>
+                                <td><span class="engagement-rate">0</span></td>
+                                <td><span class="avg-views">0</span></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="platforms-view-all view-all-data"><a href="#">View All</a></div>
+                </div>
+            </div>
+
+            
+            
+            <div class="footer">
+                <p>Copyright © <a href="#">Dreabee</a>. Designed with  by <a href="#">Dreabee</a> All rights reserved</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var options = {
+            series: [38.8, 18.7, 15.4, 12.4, 6.4, 4.4, 3.7],
+            chart: {
+                width: 420,
+                type: 'pie',
+            },
+            labels: [
+                'News & Politics',
+                'People & Blogs',
+                'Entertainment',
+                'Education',
+                'Sports',
+                'Music',
+                'Travel & Events'
+            ],
+            legend: {
+                position: 'bottom',
+                horizontalAlign: 'center',
+                fontSize: '14px',
+                labels: {
+                    colors: ['#000']
+                }
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toFixed(2);
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    return val.toFixed(1) + "%";
+                },
+                style: {
+                    fontSize: '14px',
+                    colors: ['#fff']
+                }
+            },
+            colors: ['#8E84F3', '#5dade2', '#f4d03f', '#85c1e9', '#a04000', '#a569bd', '#76d7c4']
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+
+    <script>
+        var options = {
+            series: [{
+                data: [16.75, 13.3, 13.28, 6.67, 5.13, 4.91, 3.87]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true,
+                    borderRadius: 6,
+                    dataLabels: {
+                        position: 'center' // label inside the bar
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    return val + "%";
+                },
+                style: {
+                    colors: ['#fff']
+                }
+            },
+            xaxis: {
+                categories: [
+                    "English",
+                    "Hindi",
+                    "English",
+                    "English (United States)",
+                    "Hindi",
+                    "Bangla",
+                    "Bangla"
+                ],
+                labels: {
+                    formatter: function (val) {
+                        return val + "%";
+                    }
+                }
+            },
+            colors: ['#8E84F3'] // Purple
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart2"), options);
+        chart.render();
+    </script>
+
+    <script>
+        var options = {
+            series: [38.8, 18.7, 15.4, 12.4, 6.4, 4.4, 3.7],
+            chart: {
+                width: 420,
+                type: 'pie',
+            },
+            labels: [
+                'News & Politics',
+                'People & Blogs',
+                'Entertainment',
+                'Education',
+                'Sports',
+                'Music',
+                'Travel & Events'
+            ],
+            legend: {
+                position: 'bottom',
+                horizontalAlign: 'center',
+                fontSize: '14px',
+                labels: {
+                    colors: ['#000']
+                }
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toFixed(2);
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    return val.toFixed(1) + "%";
+                },
+                style: {
+                    fontSize: '14px',
+                    colors: ['#fff']
+                }
+            },
+            colors: ['#8E84F3', '#5dade2', '#f4d03f', '#85c1e9', '#a04000', '#a569bd', '#76d7c4']
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart3"), options);
+        chart.render();
+    </script>
+
+    <script>
+        var options = {
+            series: [{
+                data: [16.75, 13.3, 13.28, 6.67, 5.13, 4.91, 3.87]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true,
+                    borderRadius: 6,
+                    dataLabels: {
+                        position: 'center' // label inside the bar
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function (val) {
+                    return val + "%";
+                },
+                style: {
+                    colors: ['#fff']
+                }
+            },
+            xaxis: {
+                categories: [
+                    "English",
+                    "Hindi",
+                    "English",
+                    "English (United States)",
+                    "Hindi",
+                    "Bangla",
+                    "Bangla"
+                ],
+                labels: {
+                    formatter: function (val) {
+                        return val + "%";
+                    }
+                }
+            },
+            colors: ['#8E84F3'] // Purple
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart4"), options);
+        chart.render();
+    </script>
+</body>
+
+</html>
