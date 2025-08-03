@@ -1,85 +1,2327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Brand Details</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-
-    .brand-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    a {
-      text-decoration: none;
-      color: #007bff;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <title>Document</title>
 </head>
+
 <body>
-  <h1>Brand Details</h1>
-  <div id="brand-container" class="brand-card">Loading...</div>
+  <main>
+    <aside>
+            <div class="Sidebar">
+                <div class="left-side-logo">
+                    <a href="#"><img src="" alt="Logo"></a>
+                </div>
+                <ul class="side-bar-menu">
+                    <li><a href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                            Dashboard
+                        </a></li>
+                    <li><a href="../search/search.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                            Search (8/50)
+                        </a></li>
+                    <li><a href="../list/list.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 6l11 0" />
+                                <path d="M9 12l11 0" />
+                                <path d="M9 18l11 0" />
+                                <path d="M5 6l0 .01" />
+                                <path d="M5 12l0 .01" />
+                                <path d="M5 18l0 .01" />
+                            </svg>
+                            Lists
+                        </a></li>
+                    <li><a href="../reports/reports.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-file-analytics">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-3 10a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m3 4a1 1 0 0 0 -1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0 -1 -1m3 -2a1 1 0 0 0 -1 1v3a1 1 0 0 0 2 0v-3a1 1 0 0 0 -1 -1" />
+                                <path d="M19 7h-4l-.001 -4.001z" />
+                            </svg>
+                            Resort
+                        </a></li>
+                    <li><a href="../campaigns/campaigns.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-speakerphone">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M18 8a3 3 0 0 1 0 6" />
+                                <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+                                <path
+                                    d="M12 8h0l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+                            </svg>
+                            Campaigns
+                        </a></li>
+                    <li><a href="brands.html" class="active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Analysis (50/50)
+                        </a></li>
+                    <li><a href="../brand-sentiment/brand-sentiment.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Brand Sentiment
+                        </a></li>
+                    <li><a href="../compare-brands/youtube.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Compare Bbrand
+                        </a></li>
+                    <li><a href="../competitor-research/competitor-research.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M12 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path d="M16 12a1 1 0 0 1 1 1v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 1 -1" />
+                                <path
+                                    d="M16 2a1 1 0 0 1 .993 .883l.007 .117v1h1a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h1v-1a1 1 0 0 1 1.993 -.117l.007 .117v1h6v-1a1 1 0 0 1 1 -1m3 7h-14v9.625c0 .705 .386 1.286 .883 1.366l.117 .009h12c.513 0 .936 -.53 .993 -1.215l.007 -.16z" />
+                            </svg>
+                            Competitor Research
+                        </a></li>
+                    <li><a href="#">Youtube Report: 14/50</a></li>
+                    <li><a href="#">Instagram Report: 1/50</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    <div class="right-main">
+      <header class="site-header">
+        <div class="header-container">
+          <div class="logo-wrapper">
+            <img src="https://www.transparentpng.com/thumb/man/vkarWM-download-man-png-image-png-image-freepngimg.png"
+              alt="Logo" class="site-logo" />
+          </div>
+
+          <div class="user-info">
+            <div class="user-name">Pawan</div>
+            <div class="user-role">Brand Account</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="search-cont-top">
+        <div class="form-inner-heading">Campaigns <span></span></div>
+
+        <div class="top-head-right"><span>Dashboard</span> <span><svg xmlns="http://www.w3.org/2000/svg" width="15"
+              height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
+              <path d="m6 17 5-5-5-5" />
+              <path d="m13 17 5-5-5-5" />
+            </svg></span> <span>Campaigns</span></div>
+      </div>
+
+      <div>
+        <div id="brand-container" class="brand-card">Loading...</div>
+
+        <div class="tab__content-container">
+          <div class="tabs-brand">
+            <button class="tab-button active" data-tab="explore">Explore</button>
+            <button class="tab-button" data-tab="videos">Videos</button>
+            <button class="tab-button" data-tab="influencers">Influencers</button>
+          </div>
+
+          <div class="tab-content active" id="explore">
+
+            <div class="brand-section">
+              <div class="brand-section__header">
+                <div class="brand-section__title">brand for month</div>
+
+                <div class="brand-section__controls">
+                  <button class="brand-section__button">1 Month</button>
+                  <button class="brand-section__button">3 Months</button>
+                  <button class="brand-section__button">6 Months</button>
+
+                  <form action="" class="brand-section__form">
+                    <input type="text" placeholder="From date" onfocus="(this.type='date')"
+                      class="brand-section__input">
+                    <input type="text" placeholder="To date" onfocus="(this.type='date')" class="brand-section__input">
+                    <button type="submit" class="brand-section__submit">Get</button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="brand-section__cards">
+                <div class="brand-section__card">
+                  <a href="" class="brand-section__link">
+                    <span class="brand-section__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="inf-svg" width="30" height="30"
+                        viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z" opacity=".3" />
+                        <path
+                          d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z" />
+                      </svg>
+                    </span>
+                    <span class="brand-section__label">Influencers</span>
+                    <span class="brand-section__value">690+</span>
+                    <span class="brand-section__change">-35.39%</span>
+                  </a>
+                </div>
+                <div class="brand-section__card">
+                  <a href="" class="brand-section__link">
+                    <span class="brand-section__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="category-svg" width="30" height="30"
+                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                        <g>
+                          <rect fill="none" height="24" width="24"></rect>
+                        </g>
+                        <g>
+                          <g opacity=".3">
+                            <path
+                              d="M6.71,18.71c-0.28,0.28-2.17,0.76-2.17,0.76s0.47-1.88,0.76-2.17C5.47,17.11,5.72,17,6,17c0.55,0,1,0.45,1,1 C7,18.28,6.89,18.53,6.71,18.71z M7.41,10.83L5.5,10.01l1.97-1.97l1.44,0.29C8.34,9.16,7.83,10.03,7.41,10.83z M13.99,18.5 l-0.82-1.91c0.8-0.42,1.67-0.93,2.49-1.5l0.29,1.44L13.99,18.5z M19.99,4.01c0,0-3.55-0.69-8.23,3.99 c-1.32,1.32-2.4,3.38-2.73,4.04l2.93,2.93c0.65-0.32,2.71-1.4,4.04-2.73C20.68,7.56,19.99,4.01,19.99,4.01z M15,11 c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2C17,10.1,16.1,11,15,11z">
+                            </path>
+                          </g>
+                          <g>
+                            <path
+                              d="M6,15c-0.83,0-1.58,0.34-2.12,0.88C2.7,17.06,2,22,2,22s4.94-0.7,6.12-1.88C8.66,19.58,9,18.83,9,18C9,16.34,7.66,15,6,15 z M6.71,18.71c-0.28,0.28-2.17,0.76-2.17,0.76s0.47-1.88,0.76-2.17C5.47,17.11,5.72,17,6,17c0.55,0,1,0.45,1,1 C7,18.28,6.89,18.53,6.71,18.71z M17.42,13.65L17.42,13.65c6.36-6.36,4.24-11.31,4.24-11.31s-4.95-2.12-11.31,4.24l-2.49-0.5 C7.21,5.95,6.53,6.16,6.05,6.63L2,10.69l5,2.14L11.17,17l2.14,5l4.05-4.05c0.47-0.47,0.68-1.15,0.55-1.81L17.42,13.65z M7.41,10.83L5.5,10.01l1.97-1.97l1.44,0.29C8.34,9.16,7.83,10.03,7.41,10.83z M13.99,18.5l-0.82-1.91 c0.8-0.42,1.67-0.93,2.49-1.5l0.29,1.44L13.99,18.5z M16,12.24c-1.32,1.32-3.38,2.4-4.04,2.73l-2.93-2.93 c0.32-0.65,1.4-2.71,2.73-4.04c4.68-4.68,8.23-3.99,8.23-3.99S20.68,7.56,16,12.24z M15,11c1.1,0,2-0.9,2-2s-0.9-2-2-2s-2,0.9-2,2 S13.9,11,15,11z">
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="brand-section__label">Influencers</span>
+                    <span class="brand-section__value">690+</span>
+                    <span class="brand-section__change">-35.39%</span>
+                  </a>
+                </div>
+                <div class="brand-section__card">
+                  <a href="" class="brand-section__link">
+                    <span class="brand-section__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="category-svg"
+                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="swatchbook">
+                        <path opacity="0.2"
+                          d="M9 22H5a3.003 3.003 0 0 1-3-3V5a3.003 3.003 0 0 1 3-3h4a3.003 3.003 0 0 1 3 3v14a3.003 3.003 0 0 1-3 3z">
+                        </path>
+                        <path opacity="0.4"
+                          d="m20.293 6.535-2.828-2.828a3.004 3.004 0 0 0-4.243 0l-1.229 1.228c0 .022.007.043.007.065v14c0 .027-.007.052-.008.08l8.301-8.302a3.004 3.004 0 0 0 0-4.243z">
+                        </path>
+                        <circle cx="7" cy="17" r="1" opacity="1"></circle>
+                        <path opacity="1"
+                          d="m19.065 12.007-7.073 7.072c0-.027.008-.052.008-.079a3.003 3.003 0 0 1-3 3h10a3.003 3.003 0 0 0 3-3v-4a3 3 0 0 0-2.935-2.993z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="brand-section__label">Influencers</span>
+                    <span class="brand-section__value">690+</span>
+                    <span class="brand-section__change">-35.39%</span>
+                  </a>
+                </div>
+                <div class="brand-section__card">
+                  <a href="" class="brand-section__link">
+                    <span class="brand-section__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="category-svg"
+                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                        <rect fill="none" height="24" width="24"></rect>
+                        <g opacity=".3">
+                          <path d="M10,5h4v14h-4V5z M4,11h4v8H4V11z M20,19h-4v-6h4V19z"></path>
+                        </g>
+                        <g>
+                          <path d="M16,11V3H8v6H2v12h20V11H16z M10,5h4v14h-4V5z M4,11h4v8H4V11z M20,19h-4v-6h4V19z">
+                          </path>
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="brand-section__label">Influencers</span>
+                    <span class="brand-section__value">690+</span>
+                    <span class="brand-section__change">-35.39%</span>
+                  </a>
+                </div>
+                <div class="brand-section__card">
+                  <a href="" class="brand-section__link">
+                    <span class="brand-section__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="inf-svg" width="30" height="30"
+                        viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z" opacity=".3" />
+                        <path
+                          d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z" />
+                      </svg>
+                    </span>
+                    <span class="brand-section__label">Influencers</span>
+                    <span class="brand-section__value">690+</span>
+                    <span class="brand-section__change">-35.39%</span>
+                  </a>
+                </div>
+                <div class="brand-section__card">
+                  <a href="" class="brand-section__link">
+                    <span class="brand-section__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="category-svg" width="30" height="30"
+                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                        <g>
+                          <rect fill="none" height="24" width="24"></rect>
+                        </g>
+                        <g>
+                          <g opacity=".3">
+                            <path
+                              d="M6.71,18.71c-0.28,0.28-2.17,0.76-2.17,0.76s0.47-1.88,0.76-2.17C5.47,17.11,5.72,17,6,17c0.55,0,1,0.45,1,1 C7,18.28,6.89,18.53,6.71,18.71z M7.41,10.83L5.5,10.01l1.97-1.97l1.44,0.29C8.34,9.16,7.83,10.03,7.41,10.83z M13.99,18.5 l-0.82-1.91c0.8-0.42,1.67-0.93,2.49-1.5l0.29,1.44L13.99,18.5z M19.99,4.01c0,0-3.55-0.69-8.23,3.99 c-1.32,1.32-2.4,3.38-2.73,4.04l2.93,2.93c0.65-0.32,2.71-1.4,4.04-2.73C20.68,7.56,19.99,4.01,19.99,4.01z M15,11 c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2C17,10.1,16.1,11,15,11z">
+                            </path>
+                          </g>
+                          <g>
+                            <path
+                              d="M6,15c-0.83,0-1.58,0.34-2.12,0.88C2.7,17.06,2,22,2,22s4.94-0.7,6.12-1.88C8.66,19.58,9,18.83,9,18C9,16.34,7.66,15,6,15 z M6.71,18.71c-0.28,0.28-2.17,0.76-2.17,0.76s0.47-1.88,0.76-2.17C5.47,17.11,5.72,17,6,17c0.55,0,1,0.45,1,1 C7,18.28,6.89,18.53,6.71,18.71z M17.42,13.65L17.42,13.65c6.36-6.36,4.24-11.31,4.24-11.31s-4.95-2.12-11.31,4.24l-2.49-0.5 C7.21,5.95,6.53,6.16,6.05,6.63L2,10.69l5,2.14L11.17,17l2.14,5l4.05-4.05c0.47-0.47,0.68-1.15,0.55-1.81L17.42,13.65z M7.41,10.83L5.5,10.01l1.97-1.97l1.44,0.29C8.34,9.16,7.83,10.03,7.41,10.83z M13.99,18.5l-0.82-1.91 c0.8-0.42,1.67-0.93,2.49-1.5l0.29,1.44L13.99,18.5z M16,12.24c-1.32,1.32-3.38,2.4-4.04,2.73l-2.93-2.93 c0.32-0.65,1.4-2.71,2.73-4.04c4.68-4.68,8.23-3.99,8.23-3.99S20.68,7.56,16,12.24z M15,11c1.1,0,2-0.9,2-2s-0.9-2-2-2s-2,0.9-2,2 S13.9,11,15,11z">
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="brand-section__label">Influencers</span>
+                    <span class="brand-section__value">690+</span>
+                    <span class="brand-section__change">-35.39%</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="brand-section__title brand-section__ment">Mention dynamics of views on Youtube(Total views and
+                paid views)</div>
+              <div id="viewsChart__brand-1"></div>
+            </div>
+
+            <div>
+              <div class="brand-section__title brand-section__ment">Mention dynamics of videos on Youtube(Total videos
+                and paid videos)</div>
+              <div id="viewsChart__brand-2"></div>
+            </div>
+
+            <div class="brand-language-summary">
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Language
+                </div>
+                <div id="brand_chart" class="brand-language-summary__chart"></div>
+
+                <div class="brand-language-summary__summary summary">
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">60.34%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">English</div>
+                    <div class="summary__value">15.37%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">4.55%</div>
+                  </div>
+                  <div class="summary__item summary__item--more">
+                    <div class="summary__label">more</div>
+                    <span class="summary__view-all view-all" onclick="toggleView('cityModal1')">View all</span>
+
+                    <!-- Modal 1 -->
+                    <div id="cityModal1" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="toggleView('cityModal1')">&times;</span>
+                        <h3>All languages</h3>
+                        <div class="modal-content__table">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Language</th>
+                                <th>Ratio</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Hindi</td>
+                                <td>36.8%</td>
+                              </tr>
+                              <tr>
+                                <td>English</td>
+                                <td>13.98%</td>
+                              </tr>
+                              <tr>
+                                <td>Hindi</td>
+                                <td>10.36%</td>
+                              </tr>
+                              <tr>
+                                <td>Telugu</td>
+                                <td>8.61%</td>
+                              </tr>
+                              <tr>
+                                <td>Bangla</td>
+                                <td>6.94%</td>
+                              </tr>
+                              <tr>
+                                <td>English</td>
+                                <td>5.88%</td>
+                              </tr>
+                              <tr>
+                                <td>English (United States)</td>
+                                <td>4.61%</td>
+                              </tr>
+                              <tr>
+                                <td>Punjabi</td>
+                                <td>4.48%</td>
+                              </tr>
+                              <tr>
+                                <td>Tamil</td>
+                                <td>3.66%</td>
+                              </tr>
+                              <tr>
+                                <td>Korean</td>
+                                <td>1.89%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <button onclick="toggleView('cityModal1')" class="modal-content__table-close">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Age
+                </div>
+                <div id="brand_chart2" class="brand-language-summary__chart"></div>
+
+                <div class="brand-language-summary__summary summary">
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">60.34%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">English</div>
+                    <div class="summary__value">15.37%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">4.55%</div>
+                  </div>
+                  <div class="summary__item summary__item--more">
+                    <div class="summary__label">more</div>
+                    <span class="summary__view-all view-all" onclick="toggleView('cityModal2')">View all</span>
+
+                    <!-- Modal 2 -->
+                    <div id="cityModal2" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="toggleView('cityModal2')">&times;</span>
+                        <h3>All Age Groups</h3>
+                        <div class="modal-content__table">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Age group</th>
+                                <th>Ratio</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>13-17</td>
+                                <td>36.8%</td>
+                              </tr>
+                              <tr>
+                                <td>18-24</td>
+                                <td>13.98%</td>
+                              </tr>
+                              <tr>
+                                <td>25-34</td>
+                                <td>10.36%</td>
+                              </tr>
+                              <tr>
+                                <td>35-44</td>
+                                <td>8.61%</td>
+                              </tr>
+                              <tr>
+                                <td>45-54</td>
+                                <td>6.94%</td>
+                              </tr>
+                              <tr>
+                                <td>55-64</td>
+                                <td>5.88%</td>
+                              </tr>
+                              <tr>
+                                <td>65+</td>
+                                <td>4.61%</td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                        <button onclick="toggleView('cityModal2')" class="modal-content__table-close">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="brand-language-summary">
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Category
+                </div>
+                <div id="brand_chart3" class="brand-language-summary__chart"></div>
+
+                <div class="brand-language-summary__summary summary">
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">60.34%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">English</div>
+                    <div class="summary__value">15.37%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">4.55%</div>
+                  </div>
+                  <div class="summary__item summary__item--more">
+                    <div class="summary__label">more</div>
+                    <span class="summary__view-all view-all" onclick="toggleView('cityModal3')">View all</span>
+
+                    <!-- Modal 3 -->
+                    <div id="cityModal3" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="toggleView('cityModal3')">&times;</span>
+                        <h3>All categories</h3>
+                        <div class="modal-content__table">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Category</th>
+                                <th>Ratio</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>People & Blogs</td>
+                                <td>36.8%</td>
+                              </tr>
+                              <tr>
+                                <td>Gaming</td>
+                                <td>13.98%</td>
+                              </tr>
+                              <tr>
+                                <td>Entertainment</td>
+                                <td>10.36%</td>
+                              </tr>
+                              <tr>
+                                <td>Education</td>
+                                <td>8.61%</td>
+                              </tr>
+                              <tr>
+                                <td>Howto & Style</td>
+                                <td>6.94%</td>
+                              </tr>
+                              <tr>
+                                <td>Science & Technology</td>
+                                <td>5.88%</td>
+                              </tr>
+                              <tr>
+                                <td>Film & Animation</td>
+                                <td>4.61%</td>
+                              </tr>
+                              <tr>
+                                <td>News & Politics</td>
+                                <td>4.48%</td>
+                              </tr>
+                              <tr>
+                                <td>Music</td>
+                                <td>3.66%</td>
+                              </tr>
+                              <tr>
+                                <td>Comedy</td>
+                                <td>1.89%</td>
+                              </tr>
+                              <tr>
+                                <td>Travel & Events</td>
+                                <td>1.72%</td>
+                              </tr>
+                              <tr>
+                                <td>Autos & Vehicles</td>
+                                <td>1.51%</td>
+                              </tr>
+                              <tr>
+                                <td>Nonprofits & Activism</td>
+                                <td>1.40%</td>
+                              </tr>
+                              <tr>
+                                <td>Sports</td>
+                                <td>1.35%</td>
+                              </tr>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <button onclick="toggleView('cityModal3')" class="modal-content__table-close">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Gender
+                </div>
+                <div id="brand_chart4" class="brand-language-summary__chart"></div>
+
+                <div class="brand-language-summary__summary summary">
+                  <div class="summary__item">
+                    <div class="summary__label">Male</div>
+                    <div class="summary__value">60.34%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Female</div>
+                    <div class="summary__value">15.37%</div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="brand-language-summary">
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Category
+                </div>
+                <div id="brand_chart5" class="brand-language-summary__chart"></div>
+
+              </div>
+              <div class="brand-language-summary__container">
+                <div class="stats-summary">
+                  <div class="stats-summary__item">
+                    <div class="stats-summary__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users-round-icon lucide-users-round">
+                        <path d="M18 21a8 8 0 0 0-16 0" />
+                        <circle cx="10" cy="8" r="5" />
+                        <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
+                      </svg>
+                    </div>
+                    <div class="stats-summary__info">
+                      <div class="stats-summary__label">Average Views</div>
+                      <div class="stats-summary__value">18.04K</div>
+                    </div>
+                  </div>
+                  <div class="stats-summary__item">
+                    <div class="stats-summary__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-wallet-icon lucide-wallet">
+                        <path
+                          d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
+                        <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
+                      </svg>
+                    </div>
+                    <div class="stats-summary__info">
+                      <div class="stats-summary__label">Average Views</div>
+                      <div class="stats-summary__value">18.04K</div>
+                    </div>
+                  </div>
+                  <div class="stats-summary__item">
+                    <div class="stats-summary__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-activity-icon lucide-activity">
+                        <path
+                          d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+                      </svg>
+                    </div>
+                    <div class="stats-summary__info">
+                      <div class="stats-summary__label">Average Views</div>
+                      <div class="stats-summary__value">18.04K</div>
+                    </div>
+                  </div>
+                  <div class="stats-summary__item">
+                    <div class="stats-summary__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-briefcase-business-icon lucide-briefcase-business">
+                        <path d="M12 12h.01" />
+                        <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                        <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                        <rect width="20" height="14" x="2" y="6" rx="2" />
+                      </svg>
+                    </div>
+                    <div class="stats-summary__info">
+                      <div class="stats-summary__label">Average Views</div>
+                      <div class="stats-summary__value">18.04K</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="brand-language-summary">
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Location Based On Country
+                </div>
+                <div id="brand_chart6" class="brand-language-summary__chart"></div>
+
+                <div class="brand-language-summary__summary summary">
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">60.34%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">English</div>
+                    <div class="summary__value">15.37%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Hindi</div>
+                    <div class="summary__value">4.55%</div>
+                  </div>
+                  <!-- <div class="summary__item summary__item--more">
+                    <div class="summary__label">more</div>
+                    <span class="summary__view-all view-all" onclick="toggleView()">View all</span>
+                  </div> -->
+                </div>
+              </div>
+              <div class="brand-language-summary__container">
+                <div class="brand-section__ment brand-section__title">
+                  Influencers Location Based On City
+                </div>
+                <div id="brand_chart7" class="brand-language-summary__chart"></div>
+
+                <div class="brand-language-summary__summary summary">
+                  <div class="summary__item">
+                    <div class="summary__label">Delhi</div>
+                    <div class="summary__value">18.4%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Mumbai</div>
+                    <div class="summary__value">13.98%</div>
+                  </div>
+                  <div class="summary__item">
+                    <div class="summary__label">Kolkata</div>
+                    <div class="summary__value">10.36%</div>
+                  </div>
+                  <div class="summary__item summary__item--more">
+                    <div class="summary__label">more</div>
+                    <span class="summary__view-all view-all" onclick="toggleView('cityModal4')">View all</span>
+                    <!-- Modal 4 -->
+                    <div id="cityModal4" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="toggleView('cityModal4')">&times;</span>
+                        <h3>All cities</h3>
+                        <div class="modal-content__table">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>City</th>
+                                <th>Ratio</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Delhi</td>
+                                <td>18.04%</td>
+                              </tr>
+                              <tr>
+                                <td>Mumbai</td>
+                                <td>13.98%</td>
+                              </tr>
+                              <tr>
+                                <td>Kolkata</td>
+                                <td>10.36%</td>
+                              </tr>
+                              <tr>
+                                <td>Bangalore</td>
+                                <td>8.61%</td>
+                              </tr>
+                              <tr>
+                                <td>Chennai</td>
+                                <td>6.94%</td>
+                              </tr>
+                              <tr>
+                                <td>Hyderabad</td>
+                                <td>5.88%</td>
+                              </tr>
+                              <tr>
+                                <td>Pune</td>
+                                <td>4.61%</td>
+                              </tr>
+                              <tr>
+                                <td>Ahmedabad</td>
+                                <td>4.48%</td>
+                              </tr>
+                              <tr>
+                                <td>Surat</td>
+                                <td>3.66%</td>
+                              </tr>
+                              <tr>
+                                <td>Lucknow</td>
+                                <td>1.89%</td>
+                              </tr>
+                              <tr>
+                                <td>Jaipur</td>
+                                <td>1.72%</td>
+                              </tr>
+                              <tr>
+                                <td>Kanpur</td>
+                                <td>1.51%</td>
+                              </tr>
+                              <tr>
+                                <td>Mirzapur</td>
+                                <td>1.40%</td>
+                              </tr>
+                              <tr>
+                                <td>Nagpur</td>
+                                <td>1.35%</td>
+                              </tr>
+                              <tr>
+                                <td>Ghaziabad</td>
+                                <td>1.33%</td>
+                              </tr>
+                              <tr>
+                                <td>Supaul</td>
+                                <td>1.25%</td>
+                              </tr>
+                              <tr>
+                                <td>Vadodara</td>
+                                <td>1.16%</td>
+                              </tr>
+                              <tr>
+                                <td>Rajkot</td>
+                                <td>1.14%</td>
+                              </tr>
+                              <tr>
+                                <td>Vishakhapatnam</td>
+                                <td>1.14%</td>
+                              </tr>
+                              <tr>
+                                <td>Indore</td>
+                                <td>1.12%</td>
+                              </tr>
+                              <tr>
+                                <td>Thane</td>
+                                <td>1.06%</td>
+                              </tr>
+                              <tr>
+                                <td>Bhopal</td>
+                                <td>1.01%</td>
+                              </tr>
+                              <tr>
+                                <td>Pimpri-Chinchwad</td>
+                                <td>0.97%</td>
+                              </tr>
+                              <tr>
+                                <td>Patna</td>
+                                <td>0.94%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <button onclick="toggleView('cityModal4')" class="modal-content__table-close">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="videoTabSection">
+              <div class="videoTabNav">
+                <button class="videoTabBtn is-selected" data-target="videoPanelA">Latest</button>
+                <button class="videoTabBtn" data-target="videoPanelB">Most Watched</button>
+                <button class="videoTabBtn" data-target="videoPanelC">Sponsored</button>
+              </div>
+
+              <div class="videoTabContent is-visible" id="videoPanelA">
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+
+
+              </div>
+
+              <div class="videoTabContent" id="videoPanelB">
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="videoTabContent" id="videoPanelC">
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="video-card">
+                  <a href="#" class="video-card__link">
+                    <span class="video-card__thumbnail">
+                      <img src="https://img.youtube.com/vi/SGnd7qAg-gI/hqdefault.jpg" alt="img" class="video-card__img">
+                    </span>
+                    <span class="video-card__content">
+                      <span class="video-card__meta">
+                        <span class="video-card__stats">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                              <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg> <span class="video-card__icon-eye">0</span></span>
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-thumbs-up-icon lucide-thumbs-up">
+                              <path d="M7 10v12" />
+                              <path
+                                d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                            </svg> <span class="video-card__icon-like">4</span></span>
+                        </span>
+                        <span class="video-card__author video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                          </svg><span>hi</span></span>
+                      </span>
+
+                      <span class="video-card__meta">
+                        <span class="video-card__date-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                              <path
+                                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                            </svg><span class="video-card__date">Apr 2025</span></span>
+                        </span>
+                        <span class="video-card__category-wrapper">
+                          <span class="video-card__stat-item"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-list-minus-icon lucide-list-minus">
+                              <path d="M11 12H3" />
+                              <path d="M16 6H3" />
+                              <path d="M16 18H3" />
+                              <path d="M21 12h-6" />
+                            </svg><span class="video-card__category">Popular & Blogs</span></span>
+                        </span>
+                      </span>
+
+                      <span class="video-card__text">
+                        <span class="video-card__title">पन्ना आपके जीव�...</span>
+                        <span class="video-card__description">कि कैसे पन्ना आपके जीवन में बदलाव ला स�...</span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <div class="tab-content" id="videos">
+
+            <div class="form-inner">
+
+              <form action="" class="influencer-form">
+
+                <div class="form-group">
+                  <div class="form-label">VIEWS</div>
+                  <div class="range-group">
+                    <div class="range-input">
+                      <label for="subfrom">From</label>
+                      <input type="text" placeholder="From" class="form-input">
+                    </div>
+                    <div class="range-input">
+                      <label for="subto">To</label>
+                      <input type="text" placeholder="To" class="form-input">
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">INFLUENCER LOCATION</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Country" selected>Select country</option>
+                    <option value="India">India</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">CATEGORY</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Category" selected>Select category</option>
+                    <option value="India">India</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
+                
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">LANGUAGE</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Category" selected>Select language</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">PUBLICATION DATE</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Category" selected>Anytime</option>
+                    <option value="In 1 month">In 1 month</option>
+                    <option value="In 2 month">In 2 month</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">PAID PARTNERSHIP</div>
+                  <div class="checkbox-group">
+                    <input type="checkbox" name="pertnership" id="pertnershipB">
+                    <label for="pertnershipB">Yes</label>
+                  </div>
+                </div>
+
+                
+              </form>
+            </div>
+
+            <div class="brand__video-cont">
+              <div class="brand__totals-result">
+                Showing 1 to 30 of <span>8.46K</span> results
+              </div>
+              <div>
+                <table class="influencer-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Title</th>
+                      <th scope="col">Views</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Language</th>
+                      <th scope="col">Location</th>
+                      <th scope="col">Date</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="influencer-title">
+                          <div class="influencer-img-placeholder"><img
+                              src="https://yt3.ggpht.com/WUZKUO7oo8hWoH8ToNA4aZoExVMfB6sQ4WHpzDKw6EWHrm6A5gE5hfTL-EoGXgwnI0f1Y1HyGQ=s800-c-k-c0x00ffffff-no-rj"
+                              alt=""></div>
+                          <div class="influencer-name"><a href="#">Glebo</a></div>
+                        </div>
+                      </td>
+                      <td><span class="subscriber-count">0</span></td>
+                      <td><span class="category">Biotechnology</span></td>
+                      <td><span class="subscriber-count">en</span></td>
+                      <td><span class="subscriber-count">ind</span></td>
+                      <td><span class="engagement-rate">Apr 01 2025</span></td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+              <div class="search-pagination">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-left-icon lucide-chevron-left">
+                    <path d="m15 18-6-6 6-6" />
+                  </svg></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-content" id="influencers">
+             <div class="form-inner">
+
+              <form action="" class="influencer-form">
+
+                <div class="form-group">
+                  <div class="form-label">AVG VIEWS</div>
+                  <div class="range-group">
+                    <div class="range-input">
+                      <label for="subfrom">From</label>
+                      <input type="text" placeholder="From" class="form-input">
+                    </div>
+                    <div class="range-input">
+                      <label for="subto">To</label>
+                      <input type="text" placeholder="To" class="form-input">
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+                <div class="form-group">
+                  <div class="form-label">SUBSCRIBERS</div>
+                  <div class="range-group">
+                    <div class="range-input">
+                      <label for="subfrom">From</label>
+                      <input type="text" placeholder="From" class="form-input">
+                    </div>
+                    <div class="range-input">
+                      <label for="subto">To</label>
+                      <input type="text" placeholder="To" class="form-input">
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">INFLUENCER LOCATION</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Country" selected>Select country</option>
+                    <option value="India">India</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">CATEGORY</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Category" selected>Select category</option>
+                    <option value="India">India</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
+                
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">LANGUAGE</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Category" selected>Select language</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">LAST VIDEO</div>
+                  <select name="lastvideo" class="form-select">
+                    <option value="Select Category" selected>Anytime</option>
+                    <option value="In 1 month">In 1 month</option>
+                    <option value="In 2 month">In 2 month</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <div class="form-label">PAID PARTNERSHIP</div>
+                  <div class="checkbox-group">
+                    <input type="checkbox" name="pertnership" id="pertnershipB">
+                    <label for="pertnershipB">Yes</label>
+                  </div>
+                </div>
+
+                
+              </form>
+            </div>
+
+            <div class="brand__video-cont brand__video-cont">
+              <div class="brand__totals-result">
+                Showing 1 to 30 of <span>8.46K</span> results
+              </div>
+              <div>
+                <table class="influencer-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Channel</th>
+                      <th scope="col">Subscribers</th>
+                      <th scope="col">Avg Views</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Language</th>
+                      <th scope="col">Location</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="influencer-title">
+                          <div class="influencer-img-placeholder"><img
+                              src="https://yt3.ggpht.com/WUZKUO7oo8hWoH8ToNA4aZoExVMfB6sQ4WHpzDKw6EWHrm6A5gE5hfTL-EoGXgwnI0f1Y1HyGQ=s800-c-k-c0x00ffffff-no-rj"
+                              alt=""></div>
+                          <div class="influencer-name"><a href="#">Glebo</a></div>
+                        </div>
+                      </td>
+                      <td><span class="subscriber-count">0</span></td>
+                      <td><span class="subscriber-count">300</span></td>
+                      <td><span class="category">Biotechnology</span></td>
+                      <td><span class="subscriber-count">en</span></td>
+                      <td><span class="subscriber-count">ind</span></td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+              <div class="search-pagination">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-left-icon lucide-chevron-left">
+                    <path d="m15 18-6-6 6-6" />
+                  </svg></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="footer">
+        <p>Copyright © <a href="#">Dreabee</a>. Designed with by <a href="#">Dreabee</a> All rights reserved</p>
+      </div>
+    </div>
+  </main>
+
 
   <script>
-    // ✅ Get platform and brand from query string: ?platform=youtube&brand=On
-    const urlParams = new URLSearchParams(window.location.search);
-    const platformSlug = urlParams.get("platform");
-    const brandSlug = urlParams.get("brand");
-
-    // ✅ Example brand data
-    const brandData = {
-      "On": {
-        name: "On",
-        category: "Retail",
-        influencers: "1.86M",
-        budget: "161.88B - 526.12B",
-        description: "On set out to shake up the running industry with a single transformative product..."
+    const options = {
+      chart: {
+        type: 'line',
+        height: 400,
+        toolbar: { show: false },
+        zoom: {
+            enabled: false
+          },
       },
-      "You": {
-        name: "YOU",
-        category: "Health & Wellness",
-        influencers: "1.63M",
-        budget: "255.77B",
-        description: "YOU offers the best hair care products made from clean ingredients."
+      title: {
+        text: "Views and Paid Views by Month",
+        align: 'left',
+        style: {
+          fontSize: '14px',
+          fontWeight: 'semiBold',
+          color: '#676766'
+        }
       },
-      "TheYou": {
-        name: "THE YOU",
-        category: "Health & Wellness",
-        influencers: "1.63M",
-        budget: "255.77B",
-        description: "THE YOU provides premium wellness solutions for everyday life."
+      xaxis: {
+        type: 'datetime',
+        categories: [
+          "2024-12-01",
+          "2025-01-01",
+          "2025-02-01",
+          "2025-03-01",
+          "2025-04-01"
+        ]
+      },
+      yaxis: {
+        labels: {
+          formatter: val => val >= 1000000 ? (val / 1000000).toFixed(1) + 'M' : val
+        }
+      },
+      annotations: {
+        xaxis: [
+          {
+            x: new Date("2024-12-01").getTime(),
+            strokeDashArray: 0,
+            borderColor: "#d0d0d0", // vertical line color
+            label: {
+              show: false
+            }
+          }
+        ]
+      },
+      colors: ['#845ef7', '#f76707'], // purple, orange
+      series: [
+        {
+          name: 'Views',
+          data: [100000, 500000, 1500000, 7000000, 1000000]
+        },
+        {
+          name: 'Paid Views',
+          data: [50000, 120000, 300000, 600000, 850000]
+        }
+      ],
+      stroke: {
+        curve: 'smooth',
+        width: 2
+      },
+      markers: {
+        size: 3
+      },
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center'
       }
     };
 
-    const container = document.getElementById("brand-container");
+    const chart = new ApexCharts(document.querySelector("#viewsChart__brand-1"), options);
+    chart.render();
+  </script>
+  <script>
+    const options2 = {
+      chart: {
+        type: 'line',
+        height: 400,
+        toolbar: { show: false },
+        zoom: {
+            enabled: false
+          },
+      },
+      title: {
+        text: "Views and Paid Views by Month",
+        align: 'left',
+        style: {
+          fontSize: '14px',
+          fontWeight: 'semiBold',
+          color: '#676766'
+        }
+      },
+      xaxis: {
+        type: 'datetime',
+        categories: [
+          "2024-12-01",
+          "2025-01-01",
+          "2025-02-01",
+          "2025-03-01",
+          "2025-04-01"
+        ]
+      },
+      yaxis: {
+        labels: {
+          formatter: val2 => val2 >= 1000000 ? (val2 / 1000000).toFixed(1) + 'M' : val2
+        }
+      },
+      annotations: {
+        xaxis: [
+          {
+            x: new Date("2024-12-01").getTime(),
+            strokeDashArray: 0,
+            borderColor: "#d0d0d0",
+            label: {
+              show: false
+            }
+          }
+        ]
+      },
+      colors: ['#845ef7', '#f76707'], // purple, orange
+      series: [
+        {
+          name: 'Views',
+          data: [100000, 500000, 1500000, 7000000, 1000000]
+        },
+        {
+          name: 'Paid Views',
+          data: [50000, 120000, 300000, 600000, 850000]
+        }
+      ],
+      stroke: {
+        curve: 'smooth',
+        width: 2
+      },
+      markers: {
+        size: 3
+      },
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center'
+      }
+    };
 
-    // ✅ Show dynamic content if found
-    if (brandSlug && brandData[brandSlug]) {
-      const data = brandData[brandSlug];
-      container.innerHTML = `
-        <h2>${data.name}</h2>
-        <p><strong>Platform:</strong> ${platformSlug}</p>
-        <p><strong>Category:</strong> ${data.category}</p>
-        <p><strong>Influencers:</strong> ${data.influencers}</p>
-        <p><strong>Budget:</strong> ${data.budget}</p>
-        <p><strong>Description:</strong> ${data.description}</p>
-        <a href="/brands/brands.html">← Back to List</a>
-      `;
-    } else {
-      container.innerHTML = `<p>No data found for brand: ${brandSlug || "N/A"}</p><a href="/brands/brands.html">← Back</a>`;
+    const chart2 = new ApexCharts(document.querySelector("#viewsChart__brand-2"), options2);
+    chart2.render();
+  </script>
+
+  <script>
+    const options3 = {
+      series: [{
+        data: [16.75, 13.3, 13.28, 6.67, 5.13, 4.91, 3.87]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350,
+        toolbar: { show: false },
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          borderRadius: 6,
+          dataLabels: {
+            position: 'top'
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        offsetX: 25,
+        formatter: function (val) {
+          return val + "%";
+        },
+        style: {
+          colors: ['#304758']
+        }
+      },
+      xaxis: {
+        categories: [
+          "English",
+          "Hindi",
+          "English",
+          "English (United States)",
+          "Hindi",
+          "Bangla",
+          "Bangla"
+        ],
+        min: 0,
+        max: 100,
+        tickAmount: 10,
+        labels: {
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      },
+      colors: ['#8E84F3'] // Purple
+    };
+
+    const chart3 = new ApexCharts(document.querySelector("#brand_chart"), options3);
+    chart3.render();
+  </script>
+
+  <script>
+    var options4 = {
+      series: [{
+        name: 'Inflation',
+        data: [2.85, 12.85, 17.85, 27.85, 32.85, 27.85, 17.85]
+      }],
+      chart: {
+        height: 350,
+        type: 'bar',
+        toolbar: { show: false },
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 10,
+          dataLabels: {
+            position: 'top',
+          },
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val + "%";
+        },
+        offsetY: -20,
+        style: {
+          fontSize: '12px',
+          colors: ["#304758"]
+        }
+      },
+      xaxis: {
+        categories: ["13-17", "18-24", "25-34", "35-44", "45-54", "55-64", "65+"],
+        position: 'top',
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        },
+        crosshairs: {
+          fill: {
+            type: 'gradient',
+            gradient: {
+              colorFrom: '#D8E3F0',
+              colorTo: '#BED1E6',
+              stops: [0, 100],
+              opacityFrom: 0.4,
+              opacityTo: 0.5,
+            }
+          }
+        },
+        tooltip: {
+          enabled: true,
+        }
+      },
+      yaxis: {
+        min: 0,
+        max: 40,
+        tickAmount: 5,
+        axisBorder: {
+          show: true,
+          color: '#d1d1d1', // light grey
+          width: 1
+        },
+        axisTicks: {
+          show: false,
+        },
+        labels: {
+          show: true,
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      },
+      grid: {
+        show: true,
+        strokeDashArray: 0,
+        position: 'back',
+        xaxis: {
+          lines: {
+            show: false
+          }
+        },
+        yaxis: {
+          lines: {
+            show: true
+          }
+        }
+      },
+      colors: ['#8E84F3']
+    };
+
+    const chart4 = new ApexCharts(document.querySelector("#brand_chart2"), options4);
+    chart4.render();
+  </script>
+
+  <script>
+    var options5 = {
+      series: [38.8, 18.7, 15.4, 12.4, 6.4, 4.4, 3.7],
+      chart: {
+        width: 420,
+        type: 'pie',
+      },
+      labels: [
+        'News & Politics',
+        'People & Blogs',
+        'Entertainment',
+        'Education',
+        'Sports',
+        'Music',
+        'Travel & Events'
+      ],
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center',
+        fontSize: '14px',
+        labels: {
+          colors: ['#000']
+        }
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val.toFixed(2);
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val.toFixed(1) + "%";
+        },
+        style: {
+          fontSize: '14px',
+          colors: ['#fff']
+        }
+      },
+      colors: ['#8E84F3', '#5dade2', '#f4d03f', '#85c1e9', '#a04000', '#a569bd', '#76d7c4']
+    };
+
+    var chart5 = new ApexCharts(document.querySelector("#brand_chart3"), options5);
+    chart5.render();
+  </script>
+
+  <script>
+    var options6 = {
+      series: [75.0, 25.0],
+      chart: {
+        width: 420,
+        type: 'pie',
+      },
+      labels: [
+        'News & Politics',
+        'People & Blogs',
+      ],
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center',
+        fontSize: '14px',
+        labels: {
+          colors: ['#000']
+        }
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val.toFixed(2);
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val.toFixed(1) + "%";
+        },
+        style: {
+          fontSize: '14px',
+          colors: ['#fff']
+        }
+      },
+      colors: ['#8E84F3', '#5dade2']
+    };
+
+    var chart6 = new ApexCharts(document.querySelector("#brand_chart4"), options6);
+    chart6.render();
+  </script>
+
+  <script>
+
+    var options7 = {
+      series: [56.2, 25.4, 18.5],
+      chart: {
+        width: 420,
+        type: 'donut',
+      },
+      labels: [
+        'News & Politics',
+        'People & Blogs',
+      ],
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center',
+        fontSize: '14px',
+        labels: {
+          colors: ['#000']
+        }
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val.toFixed(2);
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val.toFixed(1) + "%";
+        },
+        style: {
+          fontSize: '14px',
+          colors: ['#fff']
+        }
+      },
+      colors: ['#F4B849', '#5dade2', '#8E84F3']
+    };
+
+    var chart7 = new ApexCharts(document.querySelector("#brand_chart5"), options7);
+    chart7.render();
+
+  </script>
+
+  <script>
+    const options8 = {
+      series: [{
+        data: [96.83, 1.59, 1.59]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350,
+        toolbar: { show: false },
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          borderRadius: 6,
+          dataLabels: {
+            position: 'top'
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        offsetX: 25,
+        formatter: function (val) {
+          return val + "%";
+        },
+        style: {
+          colors: ['#304758']
+        }
+      },
+      xaxis: {
+        categories: [
+          "India",
+          "Brazil",
+          "United Status",
+        ],
+        min: 0,
+        max: 100,
+        tickAmount: 10,
+        labels: {
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      },
+      colors: ['#8E84F3'] // Purple
+    };
+
+    const chart8 = new ApexCharts(document.querySelector("#brand_chart6"), options8);
+    chart8.render();
+  </script>
+
+  <script>
+    const options9 = {
+      series: [{
+        data: [18.4, 13.98, 10.36, 8.61, 6.94, 5.88, 4.61]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350,
+        toolbar: { show: false },
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          borderRadius: 6,
+          dataLabels: {
+            position: 'top'
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        offsetX: 25,
+        formatter: function (val) {
+          return val + "%";
+        },
+        style: {
+          colors: ['#304758']
+        }
+      },
+      xaxis: {
+        categories: [
+          "Delhi",
+          "Mumbai",
+          "Kolkata",
+          "Bangalore",
+          "Chennai",
+          "Heyderabad",
+          "Pune"
+        ],
+        min: 0,
+        max: 100,
+        tickAmount: 10,
+        labels: {
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      },
+      colors: ['#8E84F3']
+    };
+
+    const chart9 = new ApexCharts(document.querySelector("#brand_chart7"), options9);
+    chart9.render();
+  </script>
+
+
+
+  <script src="../js/brand.js">
+
+  </script>
+
+  <script>
+    function toggleView(modalId) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+
+      // Toggle display
+      modal.style.display = (modal.style.display === "block") ? "none" : "block";
+
+      // Close on outside click
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
     }
   </script>
+
+  <script>
+    const navBtns = document.querySelectorAll('.videoTabBtn');
+    const tabPanels = document.querySelectorAll('.videoTabContent');
+
+    // Ensure first tab is active by default
+    navBtns[0].classList.add('is-selected');
+    tabPanels[0].classList.add('is-visible');
+
+    navBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active styles
+        navBtns.forEach(b => b.classList.remove('is-selected'));
+        tabPanels.forEach(p => p.classList.remove('is-visible'));
+
+        // Add active class to clicked button and panel
+        btn.classList.add('is-selected');
+        const targetPanel = btn.getAttribute('data-target');
+        document.getElementById(targetPanel).classList.add('is-visible');
+      });
+    });
+
+
+  </script>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and contents
+        buttons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Add active to clicked button and corresponding content
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
+
+  <script src="../js/table.js"></script>
 </body>
+
 </html>

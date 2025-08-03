@@ -18,7 +18,7 @@
                     <a href="#"><img src="" alt="Logo"></a>
                 </div>
                 <ul class="side-bar-menu">
-                    <li><a href="#">
+                    <li><a href="../index.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
@@ -29,7 +29,7 @@
                             </svg>
                             Dashboard
                         </a></li>
-                    <li><a href="#" class="active">
+                    <li><a href="search.html" class="active">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -54,7 +54,7 @@
                             </svg>
                             Lists
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="../reports/reports.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-file-analytics">
@@ -65,7 +65,7 @@
                             </svg>
                             Resort
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="../campaigns/campaigns.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -78,7 +78,7 @@
                             </svg>
                             Campaigns
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="../brands/brands.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
@@ -91,7 +91,7 @@
                             </svg>
                             Brand Analysis (50/50)
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="../brand-sentiment/brand-sentiment.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
@@ -104,7 +104,7 @@
                             </svg>
                             Brand Sentiment
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="../compare-brands/youtube.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
@@ -117,7 +117,7 @@
                             </svg>
                             Compare Bbrand
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="../competitor-research/competitor-research.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-calendar-month">
@@ -155,7 +155,13 @@
             <div class="search-cont-top">
                 <div class="form-inner-heading">Search</div>
 
-                <div class="top-head-right"><span>Dashboard</span> <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-right-icon lucide-chevrons-right"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg></span> <span>Search</span></div>
+                <div class="top-head-right"><span>Dashboard</span> <span><svg xmlns="http://www.w3.org/2000/svg"
+                            width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
+                            <path d="m6 17 5-5-5-5" />
+                            <path d="m13 17 5-5-5-5" />
+                        </svg></span> <span>Search</span></div>
             </div>
 
             <div class="form-wrapper">
@@ -398,8 +404,8 @@
                     <div class="form-sidebar__search">
                         <form action="" class="form-sidebar__form">
                             <div class="form-group-select">
-                                <select name="" id="" class="form-select">
-                                    <option value="Youtube">Youtube</option>
+                                <select name="" id="filter__platfoem" class="form-select filter__platfoem">
+                                    <option value="Youtube" selected>Youtube</option>
                                     <option value="Instagram">Instagram</option>
                                     <option value="Tiktok">Tiktok</option>
                                     <option value="Twitch">Twitch</option>
@@ -428,7 +434,7 @@
 
                     <div class="form-sidebar__result-list">
 
-                        <div class="result-card">
+                        <div class="result-card" data-platform="Youtube">
                             <div class="result-card__top">
                                 <div class="result-card__info">
                                     <div class="result-card__img">
@@ -494,7 +500,7 @@
                             </div>
                         </div>
 
-                        <div class="result-card">
+                        <div class="result-card" data-platform="Instagram">
                             <div class="result-card__top">
                                 <div class="result-card__info">
                                     <div class="result-card__img">
@@ -563,13 +569,21 @@
                     </div>
 
                     <div class="search-pagination">
-                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg></button>
                         <button class="active">1</button>
                         <button>2</button>
                         <button>3</button>
                         <button>4</button>
                         <button>5</button>
-                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg></button>
                     </div>
                 </div>
 
@@ -586,7 +600,8 @@
     </main>
 
 
-
+    <script src="../js/search.js"></script>
+    <script src="../js/like.js"></script>
 
 </body>
 
